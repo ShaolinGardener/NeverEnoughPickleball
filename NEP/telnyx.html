@@ -1,0 +1,20 @@
+<script>
+    const resp = await fetch(
+  `https://api.telnyx.com/v2/verifications/sms`,
+  {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer KEY017FD66C21CDAFAB529ADA65143E4732_80pR9RDgOr9IbdCVuruY6H'
+    },
+    body: JSON.stringify({
+      phone_number: '+14074320511',
+      timeout_secs: 300,
+      verify_profile_id: '12ade33a-21c0-473b-b055-b3c836e1c292'
+    })
+  }
+);
+
+const data = await resp.json();
+console.log(data);
+</script>

@@ -1,0 +1,84 @@
+﻿@model NEP.Models.Court
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Public.cshtml";
+    var facility = (Facility)ViewBag.Facility;
+}
+<h1>Creating Court for @facility.Name</h1>
+
+<p>Your facility must have at least one court, but may have as many as you choose to enter. After adding one, you may save and add another or choose done to return your facility page.</p>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <input type="hidden" name="FacilityId" value="@facility.Id" />
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsIndoor" /> @Html.DisplayNameFor(model => model.IsIndoor)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surface" class="control-label"></label>
+                <select name="Surface">
+                    <option value="Asphalt">Asphalt</option>
+                    <option value="Concrete">Concrete</option>
+                    <option value="Synthetic">Synthetic</option>
+                    <option value="Wood">Wood</option>                  
+                </select>
+                <span asp-validation-for="Surface" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Nets" class="control-label"></label>
+                <select name="Nets">
+                    <option value="Permanent">Permanent</option>
+                    <option value="Tennis">Tennis</option>
+                    <option value="BYO">BYO</option>
+                </select>
+                <span asp-validation-for="Nets" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Lines" class="control-label"></label>
+                <select name="Lines">
+                    <option value="Permanent">Permanent</option>
+                    <option value="Tennis">Tennis</option>
+                </select>
+                <span asp-validation-for="Lines" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PreferredPlayerMinimumRanking" class="control-label"></label>
+                @*<select asp-for="PreferredPlayerMinimumRanking" class="form-control" asp-items="ViewBag.PreferredPlayerMinimumRanking"></select>*@
+                <select name="PreferredPlayerMinimumRanking">
+                    <option value="All">All</option>
+                    <option value="1.0-2.0">1.0-2.0</option>
+                    <option value="2.5">2.5</option>
+                    <option value="3.0">3.0</option>
+                    <option value="3.5">3.5</option>
+                    <option value="4.0">4.0</option>
+                    <option value="4.5">4.5</option>
+                    <option value="5.0">5.0</option>
+                    <option value="5.5+">5.5+</option>
+                </select>
+                <span asp-validation-for="PreferredPlayerMinimumRanking" class="text-danger"></span>
+            </div>
+
+
+            @Html.Partial("_CourtSVG")
+            <div class="form-group">
+                <input type="submit" value="Save and Add Another" class="btn btn-primary" />
+                <input type="button" value="Done" class="btn btn-success" onclick="window.location = '/Facilities/Details/@facility.Id';" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

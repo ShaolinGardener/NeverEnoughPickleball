@@ -1,0 +1,66 @@
+﻿@model FacilityDTO
+
+<div class="row">
+    <div class="col-6">
+        <div class="container" style="width:690px">
+            <div class="row" id="result-@Model.FacilityId" style="border:1px solid #adabad;border-radius:5px;padding:0px;margin-bottom:3px">
+                <div class="col-md-3" style="padding:2px">
+                    <img src="/images/pic-cadyway.png" style="margin-left:0px;text-align:center;vertical-align:middle;width:100%" />
+                </div>
+                <div class="col-md-4" style="padding:0px;margin:0px">
+                    <h3 style="padding-left:4px;padding-top:0px;margin:0px"><span style="line-height:15px;font-size:15px;font-weight:bold">@Model.Name</span></h3>
+                    <div style="display: grid;grid-template-columns: 1fr 5fr;">
+                        <div class="left" style="width:48px;margin-left:15px">@Html.Partial("_CourtSVG",Model.CourtColors)</div>
+                        <div class="right">
+                            <p style="font-size:12px;line-height:14px;margin-left:-20px">
+                                @Model.CourtCount<br />
+                                @Model.PermNets<br />
+                                @Model.PermLines<br />
+                                @if (Model.Dedicated == "on.png")
+                                {
+                                    @Html.Raw("Dedicated Pickleball")
+                                }
+                            </p>
+                        </div>
+                    </div>
+
+                    <div style="margin-left:10px">
+                        @if (Model.Park == "on.png")
+                        {
+                            <img src="~/images/court-btn_park.png" style="width:25px" alt="Public Park" title="Public Park" />
+                            <span style="line-height:12px;font-size:12px;font-weight:bold">Public</span>
+                        }
+                        @if (Model.Fee == "on.png")
+                        {
+                            <img src="~/images/court-btn_fee.png" style="width:25px" alt="Fee" title="Fee" />
+                            <span style="line-height:12px;font-size:12px;font-weight:bold">FEE</span>
+                        }
+                    </div>
+                </div>
+                <div class="col-md-2" style="margin-top:0px">
+                    <div style="text-align:right;vertical-align:top;height:60px">
+                        <img src="~/images/Court-btn_Proshop-@Model.Proshop" style="width:25px" alt="Pro Shop" title="Pro Shop" />                        
+                        <img src="~/images/Court-btn_tournaments-@Model.Tournaments" style="width:25px" alt="Tournaments" title="Tournaments" />
+                        
+                        <p style="font-size:20px;line-height:20px;color:#f74505;margin-top:20px;font-weight:bold;text-align:center">@Model.DistanceInMiles miles</p>
+                    </div>
+                    @Html.Partial("_DaysOpen")
+                </div>
+                <div class="col-md-3" style="padding-left:20px">
+                    <img src="~/images/Court-btn_restroom-@Model.Restrooms" style="width:25px" alt="Restrooms" title="Restrooms" />
+                    <img src="~/images/Court-btn_wtrfntn-@Model.WaterFountain" style="width:25px" alt="Water Fountains" title="Water Fountains" />
+                    <img src="~/images/Court-btn_food-@Model.Food" style="width:25px" alt="Food" title="Food" />
+                    <img src="~/images/Court-btn_lights-@Model.Lights" style="width:25px" alt="Lights" title="Lights" />
+                    <img src="~/images/Court-btn_parking-@Model.Parking" style="width:25px" alt="Parking" title="Parking" />
+                    <img src="~/images/Court-btn_picnic-@Model.Picnic" style="width:25px" alt="Picnic" title="Picnic" />
+                    <img src="~/images/Court-btn_plygrnd-@Model.Playground" style="width:25px" alt="Playground" title="Playground" />
+                    <img src="~/images/Court-btn_shower-@Model.Shower" style="width:25px" alt="Showers" title="Showers" />
+                    <img src="~/images/Court-btn_lockers-@Model.Lockers" style="width:25px" alt="Lockers" title="Lockers" />
+                    <img src="~/images/Court-btn_carchrg-@Model.CarCharge" style="width:25px" alt="Car Charging" title="Car Charging" />
+
+                    <img src="~/images/logo-winterparkrec.png" style="margin-left:55px;width:100px;margin-top:25px" alt="Winter Park Recreation" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

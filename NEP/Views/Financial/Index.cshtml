@@ -1,0 +1,27 @@
+﻿@model IEnumerable<NEP.Models.Financial>
+
+<div class="column mcb-column one-second column_column">
+    <div class="column_attr clearfix" style="text-align:left;background-color:#fff; padding:25px 15%; border-radius: 6px;">
+        <h3 style="color: #ff6801">Financials</h3>
+        @{
+            var counter = 600;
+        }
+        @foreach (var item in Model)
+        {
+            counter += 1;
+            <div class="wrap mcb-wrap one valign-top clearfix">
+                <div class="mcb-wrap-inner">
+                    <div class="column mcb-column one-second column_column">
+                        @item.Name
+                    </div>
+                    <div class="column mcb-column one-second column_column" style="text-align:right">
+                        <a href="/financial/getfinancial?policyName=@item.Name" class="tech-square" data-id="@counter.ToString()">
+                            <img src="~/images/buttons/Button-Static_Download.png" id="cat-thumb-@counter.ToString()" style="width:75%;vertical-align:middle" />
+                            <img src="~/images/buttons/Button-Hover_Download.png" id="cat-thumb-hover-@counter.ToString()" style="width:75%;vertical-align:middle;display:none" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

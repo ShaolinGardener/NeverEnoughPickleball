@@ -1,0 +1,236 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\data\\nepcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\data\\nepcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\views\\facilities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\views\\facilities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\wwwroot\\gsm\\content\\gsmservice\\css\\gsmservice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\wwwroot\\gsm\\content\\gsmservice\\css\\gsmservice.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\wwwroot\\gsm\\css\\global.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\wwwroot\\gsm\\css\\global.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\wwwroot\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\models\\icalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\models\\icalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\controllers\\calendarcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\controllers\\contactcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\views\\calendar\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\views\\calendar\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\models\\calendarnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\models\\calendarnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\models\\proximitysearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\models\\proximitysearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|c:\\users\\zoso2\\downloads\\nep\\nep\\nep\\migrations\\20240406132233_addedzipcodetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8BD49BC-6C33-4A6C-AEB7-D564265F0406}|NEP\\NEP.csproj|solutionrelative:nep\\migrations\\20240406132233_addedzipcodetouser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Views\\Facilities\\Index.cshtml",
+              "RelativeDocumentMoniker": "NEP\\Views\\Facilities\\Index.cshtml",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Views\\Facilities\\Index.cshtml",
+              "RelativeToolTip": "NEP\\Views\\Facilities\\Index.cshtml",
+              "ViewState": "AQIAALcAAAAAAAAAAAAAAOkAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-24T05:40:19.225Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "gsmservice.css",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\wwwroot\\gsm\\content\\gsmservice\\css\\gsmservice.css",
+              "RelativeDocumentMoniker": "NEP\\wwwroot\\gsm\\content\\gsmservice\\css\\gsmservice.css",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\wwwroot\\gsm\\content\\gsmservice\\css\\gsmservice.css",
+              "RelativeToolTip": "NEP\\wwwroot\\gsm\\content\\gsmservice\\css\\gsmservice.css",
+              "ViewState": "AQIAAGUIAAAAAAAAAAAvwHEIAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-12T06:31:08.685Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "global.css",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\wwwroot\\gsm\\css\\global.css",
+              "RelativeDocumentMoniker": "NEP\\wwwroot\\gsm\\css\\global.css",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\wwwroot\\gsm\\css\\global.css",
+              "RelativeToolTip": "NEP\\wwwroot\\gsm\\css\\global.css",
+              "ViewState": "AQIAAHZIAAAAAAAAAAAIwLlIAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-12T06:18:14.103Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\wwwroot\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "NEP\\wwwroot\\css\\bootstrap.css",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\wwwroot\\css\\bootstrap.css",
+              "RelativeToolTip": "NEP\\wwwroot\\css\\bootstrap.css",
+              "ViewState": "AQIAAKYEAAAAAAAAAAAnwM4EAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-12T06:11:26.752Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ContactController.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Controllers\\ContactController.cs",
+              "RelativeDocumentMoniker": "NEP\\Controllers\\ContactController.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Controllers\\ContactController.cs",
+              "RelativeToolTip": "NEP\\Controllers\\ContactController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T13:13:38.702Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CalendarController.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Controllers\\CalendarController.cs",
+              "RelativeDocumentMoniker": "NEP\\Controllers\\CalendarController.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Controllers\\CalendarController.cs",
+              "RelativeToolTip": "NEP\\Controllers\\CalendarController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwBsAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T15:52:40.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NEPContext.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Data\\NEPContext.cs",
+              "RelativeDocumentMoniker": "NEP\\Data\\NEPContext.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Data\\NEPContext.cs",
+              "RelativeToolTip": "NEP\\Data\\NEPContext.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T17:00:55.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Views\\Calendar\\Create.cshtml",
+              "RelativeDocumentMoniker": "NEP\\Views\\Calendar\\Create.cshtml",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Views\\Calendar\\Create.cshtml",
+              "RelativeToolTip": "NEP\\Views\\Calendar\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACwAAABIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-06T16:49:36.01Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "iCalendar.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Models\\iCalendar.cs",
+              "RelativeDocumentMoniker": "NEP\\Models\\iCalendar.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Models\\iCalendar.cs",
+              "RelativeToolTip": "NEP\\Models\\iCalendar.cs",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAqwGQAAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T15:56:04.648Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CalendarNotification.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Models\\CalendarNotification.cs",
+              "RelativeDocumentMoniker": "NEP\\Models\\CalendarNotification.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Models\\CalendarNotification.cs",
+              "RelativeToolTip": "NEP\\Models\\CalendarNotification.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T15:45:23.027Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "NEP\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Controllers\\UserController.cs",
+              "RelativeToolTip": "NEP\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAACHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T13:20:16.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ProximitySearch.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Models\\ProximitySearch.cs",
+              "RelativeDocumentMoniker": "NEP\\Models\\ProximitySearch.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Models\\ProximitySearch.cs",
+              "RelativeToolTip": "NEP\\Models\\ProximitySearch.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABMAAAB8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2023-11-29T19:13:05.306Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "20240406132233_AddedZipCodeToUser.cs",
+              "DocumentMoniker": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Migrations\\20240406132233_AddedZipCodeToUser.cs",
+              "RelativeDocumentMoniker": "NEP\\Migrations\\20240406132233_AddedZipCodeToUser.cs",
+              "ToolTip": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\Migrations\\20240406132233_AddedZipCodeToUser.cs",
+              "RelativeToolTip": "NEP\\Migrations\\20240406132233_AddedZipCodeToUser.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T13:22:34.461Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

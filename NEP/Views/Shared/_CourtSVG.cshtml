@@ -1,0 +1,72 @@
+﻿@model CourtColors
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    CourtColors cc = new CourtColors(); 
+    if (Model == null)
+    {
+        if(ViewBag.CourtColors != null)
+        {
+            cc = (CourtColors)ViewBag.CourtColors;
+        }
+        else
+        {
+            cc = new CourtColors() { OBColor = "#003300", CourtColor = "#009900", KitchenColor = "#ff9900", LineColor = "#ffffff" };
+        }
+    }
+    else
+    {
+        cc = Model;
+    }
+}
+
+<div class="container" id="svg">
+    @if(ViewBag.ShowColorPicker != null && (bool)ViewBag.ShowColorPicker == true)
+    {
+        @Html.Partial("_CourtColorPicker",Model)
+    }
+     
+    <div class="row">
+        <div class="col-2" style="padding-left:4px">
+            <svg width="40" height="81" style="border:1px solid black">
+                <g id="ob" fill="@cc.OBColor" stroke="@cc.LineColor" stroke-width="0">
+                    <rect x="0" y="0" width="40" height="81" />
+                </g>
+                <g id="court" fill="@cc.CourtColor" stroke="@cc.LineColor" stroke-width="0">
+                    <rect x="4" y="4" width="29" height="71" />
+                </g>
+                <g id="kitchen" fill="@cc.KitchenColor" stroke="@cc.LineColor" stroke-width="0">
+                    <rect x="4" y="30" width="29" height="20" />
+                </g>
+                <g id="top-service-line" fill="@cc.LineColor">
+                    <rect x="19" y="4" width="1" height="26" />
+                </g>
+                <g id="bottom-service-line" fill="@cc.LineColor">
+                    <rect x="19" y="50" width="1" height="26" />
+                </g>                
+                <g id="left-line">
+                    <rect x="4" y="4" width="1" height="71" fill="@cc.LineColor" />
+                </g>
+                <g id="right-line">
+                    <rect x="33" y="4" width="1" height="72" fill="@cc.LineColor" />
+                </g>
+                <g id="top-line">
+                    <rect x="4" y="4" width="29" height="1" fill="@cc.LineColor" />
+                </g>
+                <g id="bottom-line">
+                    <rect x="4" y="75" width="29" height="1" fill="@cc.LineColor" />
+                </g>
+                <g id="kitchen-top-line">
+                    <rect x="4" y="30" width="29" height="1" fill="@cc.LineColor" />
+                </g>
+                <g id="kitchen-bottom-line">
+                    <rect x="4" y="50" width="29" height="1" fill="@cc.LineColor" />
+                </g>
+                <g id="net" fill="white">
+                    <rect x="2" y="40" width="34" height="1" />
+                </g>
+            </svg>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,179 @@
+﻿
+zeffy creds NEPuser-Falafel2023$
+
+
+  curl -X POST "https://api.telnyx.com/v2/verify_profiles" \
+--header "Content-Type: application/json" \
+--header "Accept: application/json" \
+--header "Authorization: Bearer KEY017FD66C21CDAFAB529ADA65143E4732_80pR9RDgOr9IbdCVuruY6H" \
+--data '{
+    "name": "profile name",
+    "language": "en-US",
+    "webhook_url": "",
+    "sms": {
+        "default_verification_timeout_secs": 300,
+        "messaging_enabled": true,
+        "messaging_template": "Hello, this is the Acme Inc verification code you requested: {code}.",
+        "rcs_enabled": true,
+        "vsms_enabled": true
+      },
+    "psd2": {
+      "default_verification_timeout_secs": 300
+    },
+    "call": {
+        "default_verification_timeout_secs": 300,
+        "default_call_timeout_secs": 30,
+        "speech_template": "Hello, this is the Acme Inc verification code you requested: {code}."
+      },
+    "flashcall": {
+        "default_verification_timeout_secs": 300
+    },
+    "whatsapp": {
+          "app_name": "Secure App",
+          "default_verification_timeout_secs": 300
+      }
+  }'
+
+
+  RAW RESPONSE
+  {
+  "data": [
+    {
+      "id": "49000188-b621-e039-159a-42d377a000b5",
+      "name": "NEP",
+      "created_at": "2023-06-13T19:00:53.454123",
+      "updated_at": "2023-06-13T19:00:53.454123",
+      "record_type": "verify_profile",
+      "enabled": true,
+      "messaging_enabled": true,
+      "messaging_template": "Hello, this is the Acme Inc verification code you requested: {code}.",
+      "default_verification_timeout_secs": 300,
+      "rcs_enabled": true,
+      "vsms_enabled": true,
+      "language": "en-US",
+      "sms": {
+        "enabled": true,
+        "messaging_enabled": true,
+        "messaging_template": "Hello, this is the Acme Inc verification code you requested: {code}.",
+        "default_verification_timeout_secs": 300,
+        "rcs_enabled": true,
+        "vsms_enabled": true,
+        "code_length": 5
+      },
+      "psd2": {
+        "enabled": true,
+        "default_verification_timeout_secs": 300,
+        "messaging_template": "Your code is {code} for payment to {payee} in the amount of {amount} {currency}."
+      },
+      "call": {
+        "enabled": true,
+        "messaging_template": "Your verification code is {code}.",
+        "default_verification_timeout_secs": 300,
+        "default_call_timeout_sec": 30,
+        "code_length": 5
+      },
+      "whatsapp": {
+        "enabled": true,
+        "default_verification_timeout_secs": 300,
+        "app_name": "NEP",
+        "code_length": 5
+      },
+      "flashcall": {
+        "enabled": true,
+        "default_verification_timeout_secs": 300
+      },
+      "webhook_url": "http://telnyxwebhooks.com:8084/947fe81f-e8ba-499b-9128-e34e2fd446ce",
+      "webhook_failover_url": null
+    }
+  ],
+  "meta": {
+    "total_pages": 1,
+    "total_results": 1,
+    "page_number": 1,
+    "page_size": 1
+  }
+}
+
+
+
+curl -X POST "https://api.telnyx.com/v2/verifications/sms" \
+      --header "Content-Type: application/json" \
+      --header "Accept: application/json" \
+      --header "Authorization: Bearer KEY017FD66C21CDAFAB529ADA65143E4732_80pR9RDgOr9IbdCVuruY6H" \
+      --data '{"phone_number": "+4074320511", "verify_profile_id": "40017fd6-6c23-4d0b-907f-d4ee11a9f9da"}' \
+      
+
+{
+  "data": {
+    "phone_number": "+14074320511",
+    "verify_profile_id": "49000188-b621-e039-159a-42d377a000b5",
+    "timeout_secs": 300,
+    "id": "84c55f40-0627-43e5-ba4f-8ee3f58c14dd",
+    "type": "sms",
+    "status": "pending",
+    "created_at": "2023-06-13T19:03:14.938137",
+    "updated_at": "2023-06-13T19:03:14.938137",
+    "record_type": "verification"
+  }
+}
+
+
+
+curl -X POST https://api.telnyx.com/v2/verifications/by_phone_number/+14074320511/actions/verify \
+  --header "Content-Type: application/json" \
+  --header "Accept: application/json" \
+  --header "Authorization: Bearer KEY017FD66C21CDAFAB529ADA65143E4732_80pR9RDgOr9IbdCVuruY6H" \
+  --data '{"code":"75116", "verify_profile_id": "40017fd6-6c23-4d0b-907f-d4ee11a9f9da"}' \
+  
+
+
+  {
+  "data": {
+    "phone_number": "+14074320511",
+    "response_code": "rejected"
+  }
+}
+
+curl -X POST https://api.telnyx.com/v2/verifications/by_phone_number/+14074320511/actions/verify \
+  --header "Content-Type: application/json" \
+  --header "Accept: application/json" \
+  --header "Authorization: Bearer KEY017FD66C21CDAFAB529ADA65143E4732_80pR9RDgOr9IbdCVuruY6H" \
+  --data '{"code":"75115", "verify_profile_id": "40017fd6-6c23-4d0b-907f-d4ee11a9f9da"}' \
+  
+
+  {
+  "data": {
+    "phone_number": "+14074320511",
+    "response_code": "accepted"
+  }
+}
+
+
+https://developers.telnyx.com/docs/v2/identity/verify/intro/
+
+
+using System;
+using System.Net.Http;
+using System.Threading.Tasks;
+using System.Text;
+using Newtonsoft.Json.Linq;
+
+public class Program
+{
+  private readonly IHttpClientFactory _httpClientFactory;
+  public static async Task Main(string[] args)
+  {
+    var client = _httpClientFactory.CreateClient();
+    client.DefaultRequestHeaders.Add("Authorization", "Bearer KEY017FD66C21CDAFAB529ADA65143E4732_80pR9RDgOr9IbdCVuruY6H");
+    JObject json = JObject.Parse(@"{
+        phone_number: '+14074320511',
+        timeout_secs: 300,
+        verify_profile_id: '40017fd6-6c23-4d0b-907f-d4ee11a9f9da'
+      }");
+    var postData = new StringContent(json.ToString(), Encoding.UTF8, "application/json");
+    var request = await client.PostAsync("https://api.telnyx.com/v2/verifications/sms", postData);
+    var response = await request.Content.ReadAsStringAsync();
+
+    Console.WriteLine(response);
+  }
+}

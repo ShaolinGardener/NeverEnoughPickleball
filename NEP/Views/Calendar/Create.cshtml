@@ -1,0 +1,69 @@
+﻿@model NEP.Models.CalendarNotification
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Public.cshtml";
+}
+
+@if (Model == null)
+{
+    <h1>Create</h1>
+
+    <h4>CalendarNotification</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="StartDateTime" class="control-label"></label>
+                    <input asp-for="StartDateTime" class="form-control" />
+                    <span asp-validation-for="StartDateTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="EndDateTime" class="control-label"></label>
+                    <input asp-for="EndDateTime" class="form-control" />
+                    <span asp-validation-for="EndDateTime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="CreatorEmail" class="control-label"></label>
+                    <input asp-for="CreatorEmail" class="form-control" />
+                    <span asp-validation-for="CreatorEmail" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Location" class="control-label"></label>
+                    <input asp-for="Location" class="form-control" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <input asp-for="Description" class="form-control" />
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Attendees" class="control-label"></label>
+                    <input asp-for="Attendees" class="form-control" />
+                    <span asp-validation-for="Attendees" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+}
+else
+{
+    <h4>Your calendar event has been emailed to all attendees.</h4>
+}
+
+<div>
+    <a asp-action="Index" asp-controller="Home">Home</a>
+</div>
+

@@ -1,0 +1,44 @@
+﻿@model CourtColors
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    CourtColors cc = new CourtColors() { OBColor = "#003300", CourtColor = "#009900", KitchenColor = "#ff9900", LineColor = "#ffffff" };
+    if(Model == null)
+    {
+        if(ViewBag.CourtColors != null)
+        {
+            cc = (CourtColors)ViewBag.CourtColors;
+        }
+    }
+    else
+    {
+        cc = Model;
+    }
+}
+<script>
+    function setLineColor(color) {
+        //debugger;
+        $('[id*="-line"]').find('rect').attr('fill', color);
+        $('#ob').find('rect').attr('stroke', color);
+        $('#court').find('rect').attr('stroke', color)
+        $('#kitchen').find('rect').attr('stroke', color)
+
+    }
+</script>
+<div class="row">
+    <div class="col-2">OB Color:</div>
+    <div class="col-2"><input type="color" name="obcolor" value="@cc.OBColor" onchange="$('#ob').find('rect').attr('fill',this.value);" /></div>
+</div>
+<div class="row">
+    <div class="col-2">Court Color:</div>
+    <div class="col-2"><input type="color" name="courtcolor" value="@cc.CourtColor" onchange="$('#court').find('rect').attr('fill',this.value);" /></div>
+</div>
+<div class="row">
+    <div class="col-2">Kitchen Color:</div>
+    <div class="col-2"><input type="color" name="kitchencolor" value="@cc.KitchenColor" onchange="$('#kitchen').find('rect').attr('fill',this.value);" /></div>
+</div>
+<div class="row">
+    <div class="col-2">Line Color:</div>
+    <div class="col-2"><input type="color" name="linecolor" value="@cc.LineColor" onchange="setLineColor(this.value);" /></div>
+</div>

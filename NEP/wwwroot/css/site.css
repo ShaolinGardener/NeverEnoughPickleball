@@ -1,0 +1,158 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+@font-face {
+    font-family: BodyFont;
+    src: url('/fonts/Gilroy-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Header3Font;
+    src: url('/fonts/Gilroy-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Header2Font;
+    src: url('/fonts/Gobold Thin.otf') format('opentype');
+}
+
+@font-face {
+    font-family: WhiteFont;
+    src: url('/fonts/AAUX PROBOLD SC.TTF') format('truetype');
+}
+
+.hero-unit {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    /*padding: 50px;*/
+}
+
+.layer-container {
+    position: relative;
+    opacity: 80%;
+    min-height: 100vh; /* Ensures the layer expands to full height */
+}
+
+.layer {
+    position: fixed;
+    bottom: 10px;
+    right: 30px;
+    width: 600px;
+    height: 550px;
+    /*margin-top: 500px;*/
+    /*background-color: #F74505; rgba(0, 0, 0, 0.5);*/
+    background-image:url('/images/DonatePopup_BG1.png');
+    background-repeat:no-repeat;
+    z-index: 1;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.left-edge {
+    margin-left: 0px;
+    text-align: left;
+    font-size: .8em;
+    font-family: BodyFont, Arial, sans-serif;
+}
+
+.centered {
+    text-align: center;
+    font-size: .8em;
+    font-family: BodyFont, Arial, sans-serif;
+}
+
+.header2 {
+    font-family: Header2Font;
+    color: #F74505;
+    font-size: 2.5em;
+    font-variant: small-caps;
+    margin-left: 180px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.header4 {
+    font-family: Header3Font;
+    color: #F74505;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.white-text {
+    font-family: WhiteFont;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    margin-bottom: 25px;
+    margin-top: 40px;
+}
+
+.fundraising-block {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:400px;
+
+}
+
+
+.separator-heading {
+    font-family: Header2Font;
+    color: #F74505;
+    font-size: 3.5em;
+    font-variant: small-caps;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    vertical-align: bottom;
+}
+
+.header3 {
+    font-family: Header3Font;
+    color: #7E7E7E;
+    font-size: 1.5em;
+    font-variant: small-caps;
+    margin-bottom: 0px;
+    margin-top: 5px;
+}
+
+.section-image {
+    border: 1px solid #F74505;
+    margin-left: 150px;
+    margin-top: 25px;
+    margin-bottom: 10px
+}
+
+.horizontal-line {
+    width: 80%;
+    height: 3px;
+    background-color: #F74505;
+    border: none;
+    text-align: center
+}
+
+.tech-square > img {
+    border: none
+}

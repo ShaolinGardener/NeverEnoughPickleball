@@ -1,0 +1,196 @@
+﻿@model NEP.Models.Facility
+
+@{
+    ViewData["Title"] = "CreateFacilityImages";
+    Layout = "~/Views/Shared/_Public.cshtml";
+
+}
+
+<h1>Images for @Model.Name</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+
+        <input type="hidden" id="facilityId" value="@Model.Id" />
+
+        <div class="form-group">
+            <label asp-for="FacilityCourtIconImage" class="control-label">Facility Search Thumbnail</label>
+            <form method="post" action="/images/upload" enctype="multipart/form-data">
+                @*<input type="hidden" value="@Model.Id" />*@
+                <input type="hidden" name="imageName" value="thumbnail" id="imageidThumbnail" />
+                <input type="text" name="description" id="descriptionThumbnail" />
+                <input type="file" id="imageFileThumbnail" name="file" />
+                <input type="hidden" name="width" id="widthThumbnail" value="207" />
+                <input type="hidden" name="height" id="heightThumbnail" value="154" />
+                <input type="hidden" name="facilityId" id="facilityIdThumbnail" value="@Model.Id" />
+                <input type="submit" value="Upload" />
+            </form>
+
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (ViewBag.FacilityImage != null)
+        {
+            <img src="@Html.Partial("_Image",((Images)ViewBag.FacilityImage))" />
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="CourtImage1" class="control-label">Details Page Image 1</label>
+            <form method="post" action="/images/upload" enctype="multipart/form-data">
+                @*<input type="hidden" value="@Model.Id" />*@
+                <input type="hidden" value="image1" id="imageid1" />
+                <input type="text" name="description1" id="description1" />
+                <input type="file" id="imageFile1" name="file1" />
+                <input type="hidden" id="width1" value="600" />
+                <input type="hidden" id="height1" value="400" />
+                <input type="submit" value="Upload" />
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (ViewBag.Image1 != null)
+        {
+            <img src="@Html.Partial("_Image",((Images)ViewBag.Image1))" />
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="CourtImage2" class="control-label">Details Page Image 2</label>
+            <form method="post" action="/images/upload" enctype="multipart/form-data">
+                @*<input type="hidden" value="@Model.Id" />*@
+                <input type="hidden" value="image2" id="imageid2" />
+                <input type="text" name="description2" id="description2" />
+                <input type="file" id="imageFile2" name="file2" />
+                <input type="hidden" id="width2" value="600" />
+                <input type="hidden" id="height2" value="400" />
+                <input type="submit" value="Upload" />
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (ViewBag.Image2 != null)
+        {
+            <img src="@Html.Partial("_Image",((Images)ViewBag.Image2))" />
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+
+        <div class="form-group">
+            <label asp-for="CourtImage3" class="control-label">Details Page Image 3</label>
+            <form method="post" action="/images/upload" enctype="multipart/form-data">
+                @*<input type="hidden" value="@Model.Id" />*@
+                <input type="hidden" value="image3" id="imageid3" />
+                <input type="text" name="description3" id="description3" />
+                <input type="file" id="imageFile3" name="file3" />
+                <input type="hidden" id="width3" value="600" />
+                <input type="hidden" id="height3" value="400" />
+                <input type="submit" value="Upload" />
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (ViewBag.Image3 != null)
+        {
+            <img src="@Html.Partial("_Image",((Images)ViewBag.Image3))" />
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="CourtImage4" class="control-label">Details Page Image 4</label>
+            <form method="post" action="/images/upload" enctype="multipart/form-data">
+                @*<input type="hidden" value="@Model.Id" />*@
+                <input type="hidden" value="image4" id="imageid4" />
+                <input type="text" name="description4" id="description4" />
+                <input type="file" id="imageFile4" name="file4" />
+                <input type="hidden" id="width4" value="600" />
+                <input type="hidden" id="height4" value="400" />
+                <input type="submit" value="Upload" />
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (ViewBag.Image4 != null)
+        {
+            <img src="@Html.Partial("_Image",((Images)ViewBag.Image4))" />
+        }
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label asp-for="CourtImage5" data-info="5" class="control-label">Details Page Image 5</label>
+            <form method="post" action="/images/upload" enctype="multipart/form-data">
+                @*<input type="hidden" value="@Model.Id" />*@
+                <input type="hidden" value="image5" id="imageid5" />
+                <input type="text" name="description5" id="description5" />
+                <input type="file" id="imageFile5" name="file" />
+                <input type="hidden" id="width5" value="600" />
+                <input type="hidden" id="height5" value="400" />
+                <input type="submit" value="Upload" />
+            </form>
+        </div>
+    </div>
+    <div class="col-md-4">
+        @if (ViewBag.Image5 != null)
+        {
+            <img src="@Html.Partial("_Image",((Images)ViewBag.Image5))" />
+        }
+    </div>
+</div>
+
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<script>
+    //$(document).ready(function () {
+    //    $('[id*=imageForm]').submit(function (e) {
+    //        e.preventDefault();
+    //        debugger;
+    //        var suffix = (this).dataset.info;
+    //        //var formData = new FormData();
+    //        //formData.append('file', $('#imageFile' + suffix)[0].files[0]);
+    //        //formData.append('imageName', $('#imageid' + suffix).val());
+    //        //formData.append('description', $('#description' + suffix).val());
+    //        //formData.append('width', $('#width' + suffix).val());
+    //        //formData.append('height', $('#height' + suffix).val());
+    //        //formData.append('facilityId',$('#facilityId').val());
+    //        // width, height,
+    //        var postData={
+    //            facilityId: $('#facilityId' + suffix).val(),
+    //            imageName: $('#imageid' + suffix).val(),
+    //            description: $('#description' + suffix).val(),
+    //            width: $('#width' + suffix).val(),
+    //            height: $('#height' + suffix).val(),
+    //            file: $('#imageFile' + suffix)[0].files[0]
+    //        };
+
+    //        $.ajax({
+    //            url: '/images/upload',
+    //            type: 'POST',
+    //            data: JSON.stringify(postData),
+    //            processData: false,
+    //            contentType: false,
+    //            success: function (data) {
+    //                alert(data);
+    //            },
+    //            error: function (error) {
+    //                alert('Error uploading image: ' + error.responseText);
+    //            }
+    //        });
+    //    });
+    //});
+</script>
+

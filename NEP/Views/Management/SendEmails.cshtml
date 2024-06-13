@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<script src="~/js/jquery.min.js"></script>
+<h3 margin-left="30px"> Corporate Solicitation</h3>
+<div class="container">
+Recipients (comma separated):
+<br />
+ <textarea name="csRecipients" id="csRecipients" style="width: 600px;height:300px"></textarea>
+<br />
+<input type="button" onclick="sendCSEmails();" value="Send Corporate Sponsorship" />
+</div>
+<h3 margin-left="30px"> Retailer/Manufacturer</h3>
+<div class="container">
+
+Recipients (comma separated):
+<br />
+<textarea name="rmRecipients" id="rmRecipients" style="width: 600px;height:300px"></textarea>
+<br />
+<input type="button" onclick="sendRMEmails();" value="Send Retailer" />
+</div>
+<script>
+    function sendCSEmails(){
+        url='/contact/sendcorporateemail';
+        textarea=$("#csRecipients");
+        sendEmail(url,textarea);
+    }
+
+    function sendRMEmails(){
+        url = '/contact/sendretaileremail';
+        textarea = $("#rmRecipients");
+        sendEmail(url, textarea);
+
+    }
+
+    function sendEmail(url, textarea){
+        $.ajax({
+            url: url,  // Replace with your actual URL
+            type: 'POST',
+            data: {
+                email: textarea.val()
+            },
+            success: function (response) {
+                textarea.val('');
+                console.log('Request successful!');
+                console.log(response);
+            },
+            error: function (xhr, status, error) {
+                console.log('Request failed!');
+                console.log(error);
+            }
+        });
+    }
+</script>

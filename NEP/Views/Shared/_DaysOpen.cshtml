@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+<div class="center-divs" style="width:130px;text-align:center;margin-top:25px">
+    @for (var i = 0; i < 7; i++)
+    {
+        var today = DateTime.Now;
+        var myDate = today.AddDays(i);
+        var dayNum = myDate.Day;
+        var weekDay = myDate.DayOfWeek.ToString().Substring(0,2);
+        var closed = "";
+        if(i % 2 == 0)
+        {
+            closed = " closed";
+        }
+
+        <div class="center-content @closed">
+            <!-- Your content here -->
+            <p style="text-align:center;color:white;font-size:12px;line-height:12px"><span style="line-height:12px;font-size:12px">@weekDay</span><br />@dayNum.ToString()</p>
+        </div>
+    }
+</div>

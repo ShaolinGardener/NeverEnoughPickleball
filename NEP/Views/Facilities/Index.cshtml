@@ -1,0 +1,330 @@
+﻿@using System.Text;
+@model IEnumerable<NEP.Models.Facility>
+
+@{
+    Layout = "~/Views/Shared/_Corporate.cshtml";
+
+    ViewData["Title"] = "Facilities";
+    var lat = 0.00;
+    var lon = 0.00;
+    if (ViewBag.Latitude != null)
+    {
+        lat = ViewBag.Latitude;
+        lon = ViewBag.Longitude;
+    }
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="~/js/jquery.min.js"></script>
+<script>
+    // default to cady way
+    window.userlatitude = 28.5937504;
+    window.userlongitude = -81.317328;
+    var useAddressLatLong = false;
+    @if (ViewBag.Latitude != null)
+    {
+        @Html.Raw("useAddressLatLong = true;")
+    }
+    if (useAddressLatLong) {
+        window.userlatitude = @lat;
+        window.userlongitude = @lon;
+    }
+    else {
+        if ("geolocation" in navigator) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    // Success: User's location is available in the 'position' object
+                    window.userlatitude = position.coords.latitude;
+                    window.userlongitude = position.coords.longitude;
+                    if (typeof MyMap !== 'undefined') {
+                        MyMap();
+                    }
+                },
+                (error) => {
+                    // Error handling if the user denies the permission or if there is an error
+                    console.error("Error getting user's location:", error.message);
+                }
+            );
+        } else {
+            // Geolocation is not supported in this browser
+            // Handle the lack of support here (show a message, etc.)
+        }
+    }
+</script>
+<link rel="stylesheet" href="~/css/bootstrap-responsive.min.css" />
+<style>
+    body:not(.woocommerce-page) table tr:hover td, body:not(.woocommerce-page) table tr:hover td a {
+        color: black;
+    }
+
+    .rowspan-10 {
+        position: relative;
+        margin-top: -20px; /* Adjust this value based on your grid spacing */
+        z-index: 1;
+    }
+
+    .center-divs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px
+        /*height: 30vh; /* Adjust this to your needs */
+    }
+
+    .center-content {
+        text-align: center;
+        /*padding: 20px;*/
+        min-width: 25px;
+        max-height: 25px;
+        /*border: 1px solid #ccc;*/
+        margin: 1px;
+        background-color: #f74505;
+        border-radius: 7px
+    }
+
+    .closed {
+        background-color: #adabad;
+    }
+</style>
+
+<body style="margin-left:50px">
+    <div id="Header_creative">
+        <a href="#" class="creative-menu-toggle"><i class="icon-menu-fine"></i></a>
+        <div class="creative-social">
+        </div>
+        <div class="creative-wrapper">
+            <div class="header_placeholder"></div>
+            <div id="Top_bar">
+                <div class="one clearfix">
+                    <div class="top_bar_left">
+                        <div class="logo">
+                            <a id="logo" href="#" title="Never Enough Pickleball" data-height="60" data-padding="50"><img class="logo-main scale-with-grid" src="/gsm/content/gsmservice/images/gsmservice.png" data-retina="/gsm/content/gsmservice/images/retina-gsmservice.png" data-height="57"><img class="logo-sticky scale-with-grid" src="/gsm/content/gsmservice/images/gsmservice.png" data-retina="/gsm/content/gsmservice/images/retina-gsmservice.png" data-height="57"><img class="logo-mobile scale-with-grid" src="/gsm/content/gsmservice/images/gsmservice.png" data-retina="/gsm/content/gsmservice/images/retina-gsmservice.png" data-height="57"><img class="logo-mobile-sticky scale-with-grid" src="/gsm/content/gsmservice/images/gsmservice.png" data-retina="/gsm/content/gsmservice/images/retina-gsmservice.png" data-height="57"></a>
+                        </div>
+                        <div class="menu_wrapper">
+                            <nav id="menu">
+                                <ul id="menu-main-menu" class="menu menu-main">
+                                    <li>
+                                        <a href="/#Header_wrapper"><span>Home</span></a>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <a class="responsive-menu-toggle" href="#"><i class="icon-menu-fine"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section mcb-section" id="ouroffer" style="padding-top:50px; padding-bottom:0px; background-color:#fff">
+        <div class="section_wrapper mcb-section-inner">
+            <div class="wrap mcb-wrap one valign-top clearfix">
+                <div class="mcb-wrap-inner">
+                    <div class="column mcb-column one-second column_column" style="margin-top:50px">
+                        <h1 style="font-family: Header2Font; color: #ff6801">Find Pickleball Courts<br />Near You</h1>
+                        <h4 style="color:#2a2a2a">By allowing us to use your location or entering an address</h4>
+                    </div>
+                    <div class="column mcb-column one-second column_column" style="text-align:right">
+                        <img src="~/gsm/images/corporateLogo.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Boxes -->
+    <div class="section mcb-section" id="ouroffer" style="padding-top:30px; padding-bottom:0px; background-color:#fff">
+        <div class="section_wrapper mcb-section-inner">
+            <div class="wrap mcb-wrap one valign-top clearfix">
+                <h3 style="color: #ff6801">Pickleball Court Search</h3>
+                <div class="mcb-wrap-inner">
+                    <div class="one">
+                        <form action="/Facilities/Index" method="post" onsubmit="return CheckFormAddress();">
+                            <p>Enter Address:</p> <input style="border-radius:7px" type="text" id="address" name="address" value="@ViewBag.Address" />
+                            <p>Radius in Miles:</p>
+                            <select id="radius" name="radius" style="border-radius:7px">
+                                <option value="5">5</option>
+                                <option value="10">10</option>
+                                <option value="20">20</option>
+                                <option value="50">50</option>
+                            </select>
+                            <input type="submit" value="Get Facilities" />
+                            <input type="hidden" name="latitude" id="latitude" />
+                            <input type="hidden" name="longitude" id="longitude" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-7">
+                @if (Model != null)
+                {
+                    foreach (var item in Model)
+                    {
+                        var facilityDTO = new FacilityDTO();
+                        facilityDTO.FacilityId = item.Id;
+                        facilityDTO.Name = item.Name;
+                        facilityDTO.Park = item.IsPublic ? "on.png" : "off.png";
+                        facilityDTO.Fee = item.Fee > 0 ? "on.png" : "off.png";
+                        
+                        facilityDTO.Lockers = item.LockerRooms ? "on.png" : "off.png";
+                        facilityDTO.CarCharge = item.CarCharge ? "on.png" : "off.png";
+                        facilityDTO.WaterFountain = item.WaterFountain ? "on.png" : "off.png";
+                        facilityDTO.Dedicated = item.Dedicated ? "on.png" : "off.png";
+                        facilityDTO.Proshop = facilityDTO.Proshop = item.HasProShop ? "on.png" : "off.png";
+                        facilityDTO.PermLines = "Permanent Lines";// item.Courts[0].Lines;
+                        facilityDTO.PermNets = "Permanent Nets"; // item.Courts[0].Nets;
+                        facilityDTO.Playground = item.Playground ? "on.png" : "off.png";
+                        facilityDTO.Picnic = item.Picnic ? "on.png" : "off.png";
+                        facilityDTO.Parking = item.Parking ? "on.png" : "off.png";
+                        facilityDTO.Tournaments = item.hasTournaments ? "on.png" : "off.png";
+                        facilityDTO.Lights = item.Lights ? "on.png" : "off.png";
+                        facilityDTO.Restrooms = item.RestRooms ? "on.png" : "off.png";
+                        facilityDTO.Shower = item.Showers ? "on.png" : "off.png";
+                        facilityDTO.DistanceInMiles = item.DistanceInMiles;
+                        if (item.DiningFacilities != null || item.Snacks)
+                            facilityDTO.Food = "on.png";
+                        else
+                            facilityDTO.Food = "off.png";
+                        if(item.NumberOfCourts > 0)
+                        {
+                            facilityDTO.CourtCount = item.NumberOfCourts.ToString();
+                        }
+                        if (item.Courts != null && item.Courts.Count > 0)
+                        {
+                            StringBuilder desc = new StringBuilder();
+                            if (facilityDTO.CourtCount == null || facilityDTO.CourtCount.Length == 0)
+                            {
+                                facilityDTO.CourtCount = item.Courts.Count.ToString();
+                            }
+                            facilityDTO.CourtCount += " " + item.Courts[0].Surface + " Courts";
+                            desc.Append(item.Courts.Count.ToString() + " " + item.Courts[0].Surface + " Courts");
+                            desc.Append("<br>" + item.Courts[0].Lines + " Lines");
+                            desc.Append("<br>" + item.Courts[0].Nets + " Nets");
+                            facilityDTO.Description = desc.ToString();
+                            facilityDTO.CourtColors = item.Courts[0].CourtColors;
+                        }
+                        else
+                        {
+                            facilityDTO.CourtColors = new CourtColors() { OBColor = "#003300", CourtColor = "#009900", KitchenColor = "#ff9900", LineColor = "#ffffff" };
+                            facilityDTO.CourtCount = "6 Hard Surface Courts";
+                        }
+
+                        <div class="container">
+                            @Html.Partial("_FacilitySearchResult", facilityDTO)
+                        </div>
+                    }
+                }
+            </div>
+            <div class="col-5">
+                <div id="googleMap" style="width:100%;height:400px;"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function myMap() {
+            var mapProp = {
+                center: new google.maps.LatLng(window.userlatitude, window.userlongitude),
+                zoom: 10,
+            };
+            var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+            map.addListener("center_changed", function () {
+                updateSearchResults(map.getCenter()); // Pass the new center to update search results
+            });
+        //function initMap() {
+        //    const map = new google.maps.Map(document.getElementById('map'), {
+        //      center: { lat: -34.397, lng: 150.644 },
+        //      zoom: 8
+        //});
+
+        @if (Model != null)
+        {
+            @Html.Raw("locations = [\n")
+
+            @foreach (var item in Model)
+            {
+                @Html.Raw("\t{ lat: " + item.Address.Latitude +
+                    ", lng: " + item.Address.Longitude + ", title: '" + 
+                item.Name + "',description: '" + 
+                item.Address.Address1 + "<br>" + item.Address.City + ", " + item.Address.ZipCode + "<br>" + item.Phone + "',id:'" + 
+                item.Id + "'},\n")
+            }
+
+            @Html.Raw("];\n")
+            @Html.Raw("locations.forEach(function (location) {\n" +
+                    "var marker = new google.maps.Marker(\n{\n" +
+                "\tposition: location,\n" +
+                "\tmap: map,\n" + 
+                "\ttitle:location.title,\n" +
+                "\ticon: '/images/NEP-SiteMap-Final.png',\n" +
+                "\tid: location.id\n" +
+                "});\n" +
+                "var infoWindow = new google.maps.InfoWindow({\n" +
+                    "\tcontent: \"<h3 class='map-highlight' data-id='\" + location.id + \"'>\" + location.title + \"</h3><p>\" + location.description + \"</p>" +
+                    "<a href='https://www.google.com/maps/dir/\" + window.userlatitude + \",\" + window.userlongitude + \"/\" + location.lat + \",\" + location.lng + \"' target='_blank'>" +
+                "Get Directions</a>\"\n"+
+                "});" +
+                "\nmarker.addListener('click', function () {\ndebugger;\n" +
+                        "\tinfoWindow.open(map, marker);\n\t$('#result-' + (this).id).css('border-color','#f74505');\n" +
+                "});" +
+
+                "\nmarker.addListener('mouseover', function () {\ndebugger;\n" +
+                "\t$('#result-' + (this).id).css('border-color','#f74505').css('border-width','2px');\n" +
+                "});" +
+
+                "\nmarker.addListener('mouseout', function () {\n" +
+                "\t$('#result-' + (this).id).css('border-color','#adabad').css('border-width','1px');\n" +
+                "});" +
+
+                "\n});")
+
+           
+        }
+                google.maps.event.addDomListener(window, 'load', myMap);
+    } // end of myMap
+    @*
+            markers.push(marker);
+
+            // Add hover event listeners
+            marker.addListener('mouseover', function () {
+            this.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+            });
+
+            marker.addListener('mouseout', function () {
+            this.setIcon(null);
+            });
+            
+            
+    *@
+    debugger;
+    </script>
+
+    <script>
+        $(function () {
+            $("#radius").val(@ViewBag.Radius);
+            $("#latitude").val(userlatitude);
+            $("#longitude").val(userlongitude);
+        });
+
+        function CheckFormAddress() {
+            if (($("#address").val().trim().length == 0) && ($("#latitude").val().length == 0)) {
+                alert("Please allow location or enter an address");
+                return false;
+            }
+        }
+
+        function updateSearchResults(newCenter) {
+            // Perform your search based on the new center
+            // This might involve making an API request, querying a database, or other actions
+            // Update your search results on the map accordingly
+            searchService.performSearch(newCenter);
+        }
+    </script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=@ViewBag.APIKey&callback=myMap"></script>
+</body>
+

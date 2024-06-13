@@ -1,0 +1,56 @@
+﻿@model NEP.Models.Court
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Public.cshtml";
+}
+
+<h1>Details</h1>
+<p><a asp-action="Edit" asp-route-id="@Model?.Id">Edit Court</a> | <a asp-action="CreateHoursOfPlay" asp-route-id="@Model?.Id">Add Hours of Play</a> | <a asp-action="/facilities/Index" asp-route-id="@Model.FacilityId">Back to Facility</a></p>
+<div>
+    <h4>Court</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Facility)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Facility.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IsIndoor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IsIndoor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Surface)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Surface)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Nets)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Nets)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Lines)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Lines)
+        </dd>
+    </dl>
+</div>
+@Html.Partial("_CourtSVG",Model.CourtColors)
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="/Facilities/Index" asp-route-id="@Model.FacilityId">Back to List</a>
+</div>

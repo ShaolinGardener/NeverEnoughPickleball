@@ -1,0 +1,59 @@
+﻿
+
+<!DOCTYPE html>
+<!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]><html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8">
+     <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/gsm/content/gsmservice/images/favicon.ico">
+
+    <!-- FONTS -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Patua+One:100,300,400,400italic,700'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic,900'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,300,400,400italic,500,700,700italic'>
+
+    <!-- CSS -->
+    <link rel='stylesheet' href='/gsm/css/global.css'>
+    <link rel='stylesheet' href='/gsm/content/gsmservice/css/structure.css'>
+    <link rel='stylesheet' href='/gsm/content/gsmservice/css/gsmservice.css'>
+    <link rel='stylesheet' href='/gsm/content/gsmservice/css/custom.css'>
+    @*<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">*@
+    
+    <!-- Revolution Slider -->
+    <link rel="stylesheet" href="/gsm/plugins/rs-plugin-5.3.1/css/settings.css">
+    <script src="~/js/jquery.min.js"></script>
+
+
+    @*<meta name="viewport" content="width=device-width, initial-scale=1.0" />*@
+    <title>Never Enough Pickleball - NEP</title>
+   @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/NEP.styles.css" asp-append-version="true" />*@
+    <style>
+        body:not(.woocommerce-page) table tr:hover td, body:not(.woocommerce-page) table tr:hover td a {
+            color: black;
+        }
+    </style>
+</head>
+<body style="margin-left:30px">
+            @RenderBody()
+ 
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

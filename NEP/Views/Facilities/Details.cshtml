@@ -1,0 +1,337 @@
+﻿@model NEP.Models.Facility
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Public.cshtml";
+}
+
+<h1>@Model.Name Details</h1>
+<h3>Images</h3>
+<a href="/Facilities/Images/?id=@Model.Id">Images</a>
+<h3>Courts</h3>
+<a href="/Courts/Create/?facilityId=@Model.Id">Add Court</a>
+
+<div>
+    <div class="row">
+        <div class="col-md-4">
+            <table>
+                <tr>
+                    <th>Court Name</th>
+                    <th>Thumbnail</th>
+                    <th>Hours</th>
+                </tr>
+
+                @foreach (var court in Model.Courts)
+                {
+                    <tr>
+                        <td>@court.Name</td>
+                        <td style="max-width:150px">@Html.Partial("_CourtSVG",court.CourtColors)</td>
+                        <td style="min-width:200px;text-align:left">
+                            <ul>
+                                @foreach (var hours in court.HoursOfPlay)
+                                {
+                                    <li>@hours.WeekDayName @hours.Hours @hours.UsageType @hours.FeeInDollars</li>
+                                }
+                            </ul>
+                            <a href="/courts/createhoursofplay?courtId=@court.Id">Hours</a>
+
+                        </td>
+                        <td><a href="/Courts/Edit/@court.Id">Edit</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+
+    </div>
+</div>
+<div>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+        <dt class="col-sm-2">
+            Address
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Address.Address1)
+            <br />
+            @Html.DisplayFor(model => model.Address.Address2)
+            <br />
+            @Html.DisplayFor(model => model.Address.City),
+            @Html.DisplayFor(model => model.Address.State.Abbreviation)
+            @Html.DisplayFor(model => model.Address.ZipCode)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContactName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContactName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ContactEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ContactEmail)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Url)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Url)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsPublic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsPublic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NEPPartner)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NEPPartner)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NumberOfCourts)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NumberOfCourts)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FacilityCourtIconImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FacilityCourtIconImage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourtImage1)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourtImage1)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourtImage2)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourtImage2)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourtImage3)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourtImage3)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourtImage4)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourtImage4)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourtImage5)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourtImage5)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CourtIconImage)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CourtIconImage)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.IsFree)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.IsFree)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Fee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Fee)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Memberships)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Memberships)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MembershipFee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MembershipFee)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MembershipDiscountFee)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MembershipDiscountFee)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Reservations)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Reservations)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.DropIns)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.DropIns)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.NEPMembershipDiscount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.NEPMembershipDiscount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.hasTournaments)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hasTournaments)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.hasLeaguePlay)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hasLeaguePlay)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.hasPartyBooking)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hasPartyBooking)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.hasSpecialEvents)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hasSpecialEvents)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.hasCorporateRetreats)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.hasCorporateRetreats)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.RestRooms)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.RestRooms)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WaterFountain)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WaterFountain)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Showers)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Showers)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LockerRooms)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LockerRooms)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.CarCharge)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.CarCharge)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Playground)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Playground)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Picnic)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Picnic)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Parking)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Parking)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Lights)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Lights)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Dedicated)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Dedicated)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Snacks)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Snacks)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Beverages)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Beverages)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.BeverageOther)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.BeverageOther)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HasProShop)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HasProShop)
+        </dd>
+        @*<dt class = "col-sm-2">
+        @Html.DisplayNameFor(model => model.ProShop)
+        </dt>
+        <dd class = "col-sm-10">
+        @Html.DisplayFor(model => model.ProShop.Id)
+        </dd>*@
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
+<script>
+    $(function(){
+        debugger;
+        $("#svg").css("width","50px");
+    });
+</script>

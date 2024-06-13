@@ -1,0 +1,48 @@
+﻿@model GoogleLocation
+@*
+
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<body style="margin-left:50px">
+<script>
+    if ("geolocation" in navigator) {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                // Success: User's location is available in the 'position' object
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+
+                // You can now use the 'latitude' and 'longitude' values in your code
+                // For example, display the user's location on the map
+                // or use it to make location-based requests to a server, etc.
+            },
+            (error) => {
+                // Error handling if the user denies the permission or if there is an error
+                console.error("Error getting user's location:", error.message);
+            }
+        );
+    } else {
+        // Geolocation is not supported in this browser
+        // Handle the lack of support here (show a message, etc.)
+    }
+</script>
+
+<form action="AddressLocation" method="post">
+    <p>Enter Address:</p> <input type="text" name="address" value="@ViewBag.Address" />
+
+    <input type="submit" value="Get Lat/Long" />
+</form>
+<br />
+@{
+    if (Model != null)
+    {
+        <h3>Google Location Data</h3>
+        <p>@ViewBag.Address<br>lat: @Model.Latitude<br />long: @Model.Longitude</p>
+
+    }
+}
+
+
+</body>

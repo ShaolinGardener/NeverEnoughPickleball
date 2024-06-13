@@ -1,0 +1,4 @@
+﻿https://support.stripe.com/questions/how-to-accept-donations-through-stripe
+https://support.stripe.com/questions/requirements-for-accepting-tips-or-donations
+
+

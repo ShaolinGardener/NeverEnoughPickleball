@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<script src="/gsm/js/jquery-3.6.0.min.js"></script>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <img src="/images/facility-sample.png" />
+        </div>
+        <div class="col-6"></div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <div class="container">
+                <div class="row" style="border:1px solid #ccc;border-radius:5px;padding:0px">
+                    <div class="col-md-3" style="padding:2px">
+                        <img src="/images/pic-cadyway.png" style="margin-left:0px;text-align:center;vertical-align:middle;width:150px;height:120px" />
+
+                    </div>
+                    <div class="col-md-3" style="padding:0px;margin:0px">
+                        <h3 style="padding:4px;padding-top:0px;margin:0px"><span style="line-height:15px;font-size:15px;font-weight:bold">Cady Way Park</span></h3>
+                        <div style="display: grid;grid-template-columns: 1fr 2.5fr;">
+                            <div class="left" style="width:48px">@Html.Partial("_CourtSVG")</div>
+                            <div class="right"><p style="font-size:10px;line-height:10px">6 Hard surface courts</p></div>
+                        </div>
+
+                        <div style="margin-top:5px;margin-left:13px">
+                            <img src="~/images/court-btn_park.png" style="width:25px" alt="Public Park" title="Public Park"/>
+                            <span style="line-height:12px;font-size:12px;font-weight:bold">Public Park</span>
+                            <img src="~/images/court-btn_fee.png" style="width:25px" alt="Fee" title="Fee" />
+                            <span style="line-height:12px;font-size:12px;font-weight:bold">FEE</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3" style="margin-top:0px">
+                        <div style="text-align:right;vertical-align:top;height:60px">
+                            <img src="~/images/Court-btn_Proshop-on.png" style="width:25px" alt="Pro Shop" title="Pro Shop" />
+                            <img src="~/images/Court-btn_tournaments-on.png" style="width:25px" alt="Tournaments" title="Tournaments" />
+                        </div>
+                        @Html.Partial("_DaysOpen")
+                    </div>
+                    <div class="col-md-3" style="padding:0px">
+                        <img src="~/images/Court-btn_restroom-on.png" style="width:25px" alt="Restrooms" title="Restrooms" />
+                        <img src="~/images/Court-btn_wtrfntn-on.png" style="width:25px" alt="Water Fountains" title="Water Fountains" />
+                        <img src="~/images/Court-btn_food-on.png" style="width:25px" alt="Food" title="Food" />
+                        <img src="~/images/Court-btn_lights-on.png" style="width:25px" alt="Lights" title="Lights" />
+                        <img src="~/images/Court-btn_parking-on.png" style="width:25px" alt="Parking" title="Parking" />
+                        <img src="~/images/Court-btn_picnic-on.png" style="width:25px" alt="Picnic" title="Picnic" />
+                        <img src="~/images/Court-btn_plygrnd-on.png" style="width:25px" alt="Playground" title="Playground" />
+                        <img src="~/images/Court-btn_shower-on.png" style="width:25px" alt="Showers" title="Showers" />
+                        <img src="~/images/Court-btn_lockers-on.png" style="width:25px" alt="Lockers" title="Lockers" />
+                        <img src="~/images/Court-btn_carchrg-on.png" style="width:25px" alt="Car Charging" title="Car Charging" />
+
+                        <img src="~/images/logo-winterparkrec.png" style="margin-left:55px;width:100px;margin-top:10px" alt="Winter Park Recreation" />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-6 rowspan-10"></div>
+    </div>
+
+</div>

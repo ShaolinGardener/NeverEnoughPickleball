@@ -1,0 +1,10 @@
+0000000000000000000000000000000000000000 5db99777e940c00b15fef75a8e8fa6783b92ad63 shaolingardener <mmcxiit4e@gmail.com> 1692101228 -0400	commit (initial): first commit
+5db99777e940c00b15fef75a8e8fa6783b92ad63 0000000000000000000000000000000000000000 shaolingardener <mmcxiit4e@gmail.com> 1692101240 -0400	Branch: renamed refs/heads/master to refs/heads/main
+0000000000000000000000000000000000000000 5db99777e940c00b15fef75a8e8fa6783b92ad63 shaolingardener <mmcxiit4e@gmail.com> 1692101240 -0400	Branch: renamed refs/heads/master to refs/heads/main
+5db99777e940c00b15fef75a8e8fa6783b92ad63 e74cb45c71a8be930af5b85a2d3d86970b358dbb shaolingardener <mmcxiit4e@gmail.com> 1692101384 -0400	commit: initial
+e74cb45c71a8be930af5b85a2d3d86970b358dbb 913d97caab69d5d6d63c1a7690c4d4cdaa45313c shaolingardener <mmcxiit4e@gmail.com> 1692101570 -0400	commit: added fee button trigger
+913d97caab69d5d6d63c1a7690c4d4cdaa45313c f2289105fef1feb729a6c25573dacd4847422f2f shaolingardener <mmcxiit4e@gmail.com> 1692101596 -0400	commit: added fee button changes
+f2289105fef1feb729a6c25573dacd4847422f2f 13da74af27551264b656111a833be82c3a2212a0 shaolingardener <mmcxiit4e@gmail.com> 1692107858 -0400	commit: added court color test
+13da74af27551264b656111a833be82c3a2212a0 8df7f6a59c3c20aee43880cc57d4ecfcba8ec866 shaolingardener <mmcxiit4e@gmail.com> 1692125975 -0400	commit: Added Mileage
+8df7f6a59c3c20aee43880cc57d4ecfcba8ec866 157fae3360fd5aaa6596bda531ac3dac26882947 shaolingardener <mmcxiit4e@gmail.com> 1692200174 -0400	commit: hover
+157fae3360fd5aaa6596bda531ac3dac26882947 1935da477bac62c47129e49fab4c1f41d9476972 shaolingardener <mmcxiit4e@gmail.com> 1692889615 -0400	commit: Lots of changes, including facility and court creation

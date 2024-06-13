@@ -1,0 +1,27 @@
+﻿@model GoogleLocation
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+@if(ViewBag.SMSVerified == true)
+{
+    <p>Your account has been verified.</p>
+}
+else{
+<p>A verification message has been sent to @ViewBag.PhoneNumber. Please enter the code you received below.<br /></p>
+
+<form asp-action="SubmitSMSVerification">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="form-group">
+        <label class="control-label">Phone Number</label>
+        <input type="text" name="phoneNumber" value="@ViewBag.PhoneNumber"/>
+    </div>
+    <div class="form-group">
+        <label class="control-label">Code</label>
+        <input type="text" name="code" />
+    </div>
+    <input type="submit" value="Submit" />
+</form>
+}

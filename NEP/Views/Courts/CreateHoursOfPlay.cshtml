@@ -1,0 +1,62 @@
+﻿@model NEP.Models.HoursOfPlay
+
+@{
+    ViewData["Title"] = "HoursOfOperation";
+    Layout = "~/Views/Shared/_Public.cshtml";
+    var court = (Court)ViewBag.Court;
+}
+
+<h1>Hours Of Availability</h1>
+<style>
+    input {
+        border-radius:7px;
+    }
+</style>
+<h4>Hours of Play for @court.Name</h4>
+<p>You may enter several blocks for each day for this court. When finished, Done will return to this Court's Details page.</p>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="HoursOfPlay">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" name="courtId" value="@court.Id" />
+            <div class="form-group">
+                <label asp-for="WeekDay" class="control-label"></label>
+                @*<select asp-for="WeekDay" class="form-control" asp-asp-items="ViewBag.WeekDays"></select>*@
+                @Html.DropDownList("WeekDay", ViewBag.WeekDays, "Select", new { @class = "form-control" })
+                <span asp-validation-for="WeekDay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hours" class="control-label"></label>
+                <input asp-for="Hours" class="form-control" />
+                <span asp-validation-for="Hours" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Fee" class="control-label"></label>
+                <input asp-for="Fee" class="form-control" />
+                <span asp-validation-for="Fee" class="text-danger"></span>
+            </div>            
+            <div class="form-group">
+                <label asp-for="UsageType" class="control-label"></label>
+                <input asp-for="UsageType" class="form-control" />
+                <span asp-validation-for="UsageType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save and Add Another" class="btn btn-primary" />
+                <input type="button" value="Done" onclick="window.location='/Courts/Details/@court.Id';" class="btn btn-sucess" />
+            </div>
+        </form>
+    </div>
+    <div class="col-md-4">
+        @if(ViewBag.HoursOfPlay != null)
+        {
+            @Html.Partial("_CourtHoursOfPlay",(List<HoursOfPlay>)ViewBag.HoursOfPlay)
+        }
+        
+    </div>
+</div>
+
+<div>
+    <a href="/facilities/details/?id=@court.FacilityId">Back to List</a>
+</div>
+

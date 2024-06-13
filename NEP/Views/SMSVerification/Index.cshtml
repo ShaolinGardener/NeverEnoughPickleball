@@ -1,0 +1,31 @@
+﻿
+<script>
+    const query = new URLSearchParams({
+        'filter[name]': 'string',
+        'page[size]': '25',
+        'page[number]': '1'
+    }).toString();
+
+    const resp = await fetch(
+        `https://api.telnyx.com/v2/verify_profiles?${query}`,
+        {
+            method: 'GET',
+            headers: {
+                Authorization: 'Bearer KEY017FD66C21CDAFAB529ADA65143E4732_80pR9RDgOr9IbdCVuruY6H'
+            }
+        }
+    );
+
+    (async function main() {
+        // You can use await inside this function block
+        const data = await resp.text();
+        console.log(data);
+        $("#result").html(data);
+    })();
+
+    
+</script>
+
+<div id="result">
+
+</div>
