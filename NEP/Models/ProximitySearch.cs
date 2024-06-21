@@ -110,7 +110,8 @@ namespace NEP.Models
                 return gl;
             }
             catch(Exception ex) {
-                return null;
+
+                return new GoogleLocation() { Latitude = 28.602671980835158, Longitude = -81.28431554903162 }; 
             }
 
             //using (var client = new HttpClient())
