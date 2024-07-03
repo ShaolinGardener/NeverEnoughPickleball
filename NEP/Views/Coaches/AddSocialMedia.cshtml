@@ -1,0 +1,145 @@
+﻿@model NEP.Models.CoachSocialMedia
+
+@{
+    ViewData["Title"] = "Add Social Media";
+    Layout = "~/Views/Shared/_Public.cshtml";
+}
+
+<h1 class="bg-orange text-white p-2">Coach Social Media (copy & paste link)</h1>
+<style>
+    .bg-orange {
+        background-color: #ff5733 !important; /* Define the same orange color */
+        background-color: #ff5733;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    input {
+        border-radius: 7px;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+
+    .form-group label {
+        font-weight: bold;
+    }
+
+    .save-button, .cancel-button {
+        background-color: #ff5733;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .save-button:hover, .cancel-button:hover {
+            background-color: #ff3300;
+        }
+
+    .info-text {
+        font-size: 0.9em;
+        color: #777;
+    }
+
+    .bg-orange {
+        background-color: #ff5733 !important;
+    }
+
+    .form-group {
+        margin-bottom: 1.5em;
+    }
+
+    .col-md-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+</style>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="AddSocialMedia">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CoachId" />
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Facebook" class="control-label">Facebook</label>
+                            <input asp-for="Facebook" class="form-control" />
+                            <span asp-validation-for="Facebook" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Instagram" class="control-label">Instagram</label>
+                            <input asp-for="Instagram" class="form-control" />
+                            <span asp-validation-for="Instagram" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="YouTube" class="control-label">YouTube</label>
+                            <input asp-for="YouTube" class="form-control" />
+                            <span asp-validation-for="YouTube" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Twitter" class="control-label">Twitter</label>
+                            <input asp-for="Twitter" class="form-control" />
+                            <span asp-validation-for="Twitter" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="LinkedIn" class="control-label">LinkedIn</label>
+                            <input asp-for="LinkedIn" class="form-control" />
+                            <span asp-validation-for="LinkedIn" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="WhatsApp" class="control-label">WhatsApp</label>
+                            <input asp-for="WhatsApp" class="form-control" />
+                            <span asp-validation-for="WhatsApp" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="TikTok" class="control-label">TikTok</label>
+                            <input asp-for="TikTok" class="form-control" />
+                            <span asp-validation-for="TikTok" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="Snapchat" class="control-label">Snapchat</label>
+                            <input asp-for="Snapchat" class="form-control" />
+                            <span asp-validation-for="Snapchat" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-text mt-3">
+                    Information above used for Coach contact for public viewing on <strong>Never Enough Pickleball</strong> website and <strong>CourtChatr</strong> app. If coach works for facility, register facility as Park Membership as well.
+                </div>
+
+                <div class="form-group mt-3">
+                    <input type="submit" value="Save" class="save-button" />
+                    <input type="button" value="Cancel" onclick="window.location='/Coaches';" class="cancel-button" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

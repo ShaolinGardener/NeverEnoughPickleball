@@ -37,6 +37,7 @@ namespace NEP.Data
 		public DbSet<CourtColors> CourtColors { get; set; }
         public DbSet<Images> Images { get; set; }
         public DbSet<Coach> Coaches { get; set; }
+        public DbSet<CoachSocialMedia> CoachSocialMedias { get; set; }
 
         public DbSet<CalendarNotification> CalendarNotifications { get; set; }
         public DbSet<Attendee> Attendees { get; set; }
@@ -103,6 +104,11 @@ namespace NEP.Data
 
 			modelBuilder.Entity<DistanceInMiles>()
 				.HasNoKey();
+
+            modelBuilder.Entity<Coach>()
+                .HasOne(c => c.CoachSocialMedia)
+                .WithOne(cs => cs.Coach)
+                .HasForeignKey<CoachSocialMedia>(cs => cs.CoachId);
         }
 
         

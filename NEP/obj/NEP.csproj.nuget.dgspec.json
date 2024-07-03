@@ -1,34 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\NEP.csproj": {}
+    "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/NEP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\NEP.csproj": {
+    "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/NEP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\NEP.csproj",
+        "projectUniqueName": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/NEP.csproj",
         "projectName": "NEP",
-        "projectPath": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\NEP.csproj",
-        "packagesPath": "C:\\Users\\zoso2\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zoso2\\Downloads\\NEP\\NEP\\NEP\\obj\\",
+        "projectPath": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/NEP.csproj",
+        "packagesPath": "/Users/vishwanath/.nuget/packages/",
+        "outputPath": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\zoso2\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/vishwanath/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
+          "/usr/local/share/dotnet/sdk/7.0.316/Sdks/Microsoft.NET.Sdk.Web/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -41,11 +33,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -136,7 +123,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.316/RuntimeIdentifierGraph.json"
         }
       }
     }

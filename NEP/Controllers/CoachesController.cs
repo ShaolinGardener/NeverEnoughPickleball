@@ -145,5 +145,37 @@ namespace NEP.Controllers
         {
             return _context.Coaches.Any(e => e.Id == id);
         }
+
+        // GET: Coaches/AddSocialMedia/5
+        public async Task<IActionResult> AddSocialMedia(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var coach = await _context.Coaches.FindAsync(id);
+            if (coach == null)
+            {
+                return NotFound();
+            }
+
+            var coachSocialMedia = new CoachSocialMedia { CoachId = coach.Id };
+            return View(coachSocialMedia);
+        }
+
+        // POST: Coaches/AddSocialMedia
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddSocialMedia([Bind("CoachId,Facebook,Instagram,YouTube,Twitter,LinkedIn,WhatsApp,TikTok,Snapchat")] CoachSocialMedia coachSocialMedia)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Add(coachSocialMedia);
+                await _context.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            return View(coachSocialMedia);
+        }
     }
 }

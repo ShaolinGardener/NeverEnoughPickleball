@@ -156,6 +156,56 @@ namespace NEP.Migrations
                     b.ToTable("Coaches");
                 });
 
+            modelBuilder.Entity("NEP.Models.CoachSocialMedia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CoachId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Facebook")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Instagram")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LinkedIn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Snapchat")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TikTok")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Twitter")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WhatsApp")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YouTube")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CoachId");
+
+                    b.ToTable("CoachSocialMedias");
+                });
+
             modelBuilder.Entity("NEP.Models.Court", b =>
                 {
                     b.Property<int>("Id")
@@ -948,6 +998,17 @@ namespace NEP.Migrations
                     b.HasOne("NEP.Models.CalendarNotification", null)
                         .WithMany("Attendees")
                         .HasForeignKey("CalendarNotificationUID");
+                });
+
+            modelBuilder.Entity("NEP.Models.CoachSocialMedia", b =>
+                {
+                    b.HasOne("NEP.Models.Coach", "Coach")
+                        .WithMany()
+                        .HasForeignKey("CoachId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Coach");
                 });
 
             modelBuilder.Entity("NEP.Models.Court", b =>
