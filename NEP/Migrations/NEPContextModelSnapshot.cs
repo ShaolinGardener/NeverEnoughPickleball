@@ -135,7 +135,38 @@ namespace NEP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("BusinessHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CoachingHoursOption")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FacilitiesContactEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FacilitiesName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("HolidayDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("HolidayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HolidayName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Locations")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -144,6 +175,10 @@ namespace NEP.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ScheduledHolidays")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -200,8 +235,6 @@ namespace NEP.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CoachId");
 
                     b.ToTable("CoachSocialMedias");
                 });
@@ -998,17 +1031,6 @@ namespace NEP.Migrations
                     b.HasOne("NEP.Models.CalendarNotification", null)
                         .WithMany("Attendees")
                         .HasForeignKey("CalendarNotificationUID");
-                });
-
-            modelBuilder.Entity("NEP.Models.CoachSocialMedia", b =>
-                {
-                    b.HasOne("NEP.Models.Coach", "Coach")
-                        .WithMany()
-                        .HasForeignKey("CoachId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Coach");
                 });
 
             modelBuilder.Entity("NEP.Models.Court", b =>

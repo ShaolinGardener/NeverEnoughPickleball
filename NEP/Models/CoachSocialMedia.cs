@@ -13,6 +13,5 @@
         public string TikTok { get; set; }
         public string Snapchat { get; set; }
 
-        public Coach Coach { get; set; }
     }
 }

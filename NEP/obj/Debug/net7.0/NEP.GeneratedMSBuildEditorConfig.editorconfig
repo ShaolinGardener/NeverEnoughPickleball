@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/vishwanath/Documents/NeverEnoughPickleball/NEP
 build_property._RazorSourceGeneratorDebug = 
 
+[/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/Views/Availabilities/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQXZhaWxhYmlsaXRpZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/Views/Calendar/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2FsZW5kYXIvQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +44,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29hY2hlcy9FZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/Views/Coaches/EditSocialMedia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29hY2hlcy9FZGl0U29jaWFsTWVkaWEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/Views/Coaches/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29hY2hlcy9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/Views/Coaches/SocialMediaDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29hY2hlcy9Tb2NpYWxNZWRpYURldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/Views/Coaches/ViewSocialMedia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ29hY2hlcy9WaWV3U29jaWFsTWVkaWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/Views/Contact/Signature.cshtml]

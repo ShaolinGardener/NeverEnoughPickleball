@@ -1,4 +1,6 @@
-﻿namespace NEP.Models
+﻿using System;
+
+namespace NEP.Models
 {
     public class Coach
     {
@@ -9,6 +11,5 @@
         public string PhoneNumber { get; set; }
         public string Specialization { get; set; }
 
-        public CoachSocialMedia CoachSocialMedia { get; set; }
     }
 }

@@ -1,0 +1,53 @@
+﻿@model NEP.Models.Availability
+
+@{
+    ViewData["Title"] = "Add Availability";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Add Availability</h1>
+@if (ViewBag.CoachId != null)
+{
+    <input type="hidden" asp-for="CoachId" value="@ViewBag.CoachId" />
+}
+
+<form asp-action="Create">
+    <input type="hidden" asp-for="CoachId" />
+
+    <div class="form-group">
+        <label asp-for="FacilityName" class="control-label"></label>
+        <input asp-for="FacilityName" class="form-control" />
+        <span asp-validation-for="FacilityName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FacilityContactEmail" class="control-label"></label>
+        <input asp-for="FacilityContactEmail" class="form-control" />
+        <span asp-validation-for="FacilityContactEmail" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="MondayHours" class="control-label"></label>
+        <input asp-for="MondayHours" class="form-control" />
+        <span asp-validation-for="MondayHours" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="TuesdayHours" class="control-label"></label>
+        <input asp-for="TuesdayHours" class="form-control" />
+        <span asp-validation-for="TuesdayHours" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div class="form-group">
+    <a asp-controller="Coaches" asp-action="Index" class="btn btn-secondary">Back to Coaches</a>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

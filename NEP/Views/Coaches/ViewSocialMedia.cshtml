@@ -1,0 +1,46 @@
+﻿@model NEP.Models.CoachSocialMedia
+
+@{
+    ViewData["Title"] = "View Social Media";
+    Layout = "~/Views/Shared/_Public.cshtml";
+}
+
+<h1>Social Media Details</h1>
+
+<div>
+    <h4>Social Media Links</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Facebook</dt>
+        <dd class="col-sm-10">@Model.Facebook</dd>
+
+        <dt class="col-sm-2">Instagram</dt>
+        <dd class="col-sm-10">@Model.Instagram</dd>
+
+        <dt class="col-sm-2">YouTube</dt>
+        <dd class="col-sm-10">@Model.YouTube</dd>
+
+        <dt class="col-sm-2">Twitter</dt>
+        <dd class="col-sm-10">@Model.Twitter</dd>
+
+        <dt class="col-sm-2">LinkedIn</dt>
+        <dd class="col-sm-10">@Model.LinkedIn</dd>
+
+        <dt class="col-sm-2">WhatsApp</dt>
+        <dd class="col-sm-10">@Model.WhatsApp</dd>
+
+        <dt class="col-sm-2">TikTok</dt>
+        <dd class="col-sm-10">@Model.TikTok</dd>
+
+        <dt class="col-sm-2">Snapchat</dt>
+        <dd class="col-sm-10">@Model.Snapchat</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Index" class="btn btn-secondary">Back to Coaches</a>
+    <a asp-action="EditSocialMedia" asp-route-id="@Model.Id" class="btn btn-warning">Edit Social Media</a>
+
+
+
+</div>

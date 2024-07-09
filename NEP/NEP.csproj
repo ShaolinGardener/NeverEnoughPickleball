@@ -16,6 +16,7 @@
     <Folder Include="wwwroot\TempFiles\" />
     <Folder Include="wwwroot\static\Financials\" />
     <Folder Include="wwwroot\static\Policies\" />
+    <Folder Include="Views\Availabilities\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,4 +48,7 @@
     <Using Include="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Availabilities\" />
+  </ItemGroup>
 </Project>

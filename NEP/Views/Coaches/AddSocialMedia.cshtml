@@ -137,8 +137,10 @@
 
                 <div class="form-group mt-3">
                     <input type="submit" value="Save" class="save-button" />
+                    <a asp-action="ViewSocialMedia" asp-route-coachId="@Model.CoachId" class="btn btn-info">View Social Media</a>
                     <input type="button" value="Cancel" onclick="window.location='/Coaches';" class="cancel-button" />
                 </div>
+
             </form>
         </div>
     </div>

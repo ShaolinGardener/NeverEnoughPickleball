@@ -40,6 +40,23 @@ namespace NEP.Controllers
             return View(coach);
         }
 
+        // GET: Coaches/DetailsSocialMedia/5
+        public async Task<IActionResult> DetailsSocialMedia(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var coachSocialMedia = await _context.CoachSocialMedias.FirstOrDefaultAsync(m => m.Id == id);
+            if (coachSocialMedia == null)
+            {
+                return NotFound();
+            }
+
+            return View(coachSocialMedia);
+        }
+
         // GET: Coaches/Create
         public IActionResult Create()
         {
@@ -163,6 +180,24 @@ namespace NEP.Controllers
             var coachSocialMedia = new CoachSocialMedia { CoachId = coach.Id };
             return View(coachSocialMedia);
         }
+        // GET: Coaches/ViewSocialMedia/5
+        public async Task<IActionResult> ViewSocialMedia(int? coachId)
+        {
+            if (coachId == null)
+            {
+                return NotFound();
+            }
+
+            var coachSocialMedia = await _context.CoachSocialMedias
+                                        .FirstOrDefaultAsync(m => m.CoachId == coachId);
+
+            if (coachSocialMedia == null)
+            {
+                return NotFound();
+            }
+
+            return View(coachSocialMedia);
+        }
 
         // POST: Coaches/AddSocialMedia
         [HttpPost]
@@ -173,9 +208,62 @@ namespace NEP.Controllers
             {
                 _context.Add(coachSocialMedia);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction(nameof(ViewSocialMedia), new { coachId = coachSocialMedia.CoachId });
             }
             return View(coachSocialMedia);
+        }
+
+        public async Task<IActionResult> EditSocialMedia(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var socialMedia = await _context.CoachSocialMedias.FindAsync(id);
+            if (socialMedia == null)
+            {
+                return NotFound();
+            }
+
+            return View("AddSocialMedia", socialMedia); // Use AddSocialMedia view for editing
+        }
+
+        // POST: SocialMedia/SaveSocialMedia
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> SaveSocialMedia(int id, [Bind("Id,Facebook,Instagram,YouTube,Twitter,LinkedIn,WhatsApp,TikTok,Snapchat")] CoachSocialMedia coachSocialMedia)
+        {
+            if (id != coachSocialMedia.Id)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    _context.Update(coachSocialMedia);
+                    await _context.SaveChangesAsync();
+                }
+                catch (DbUpdateConcurrencyException)
+                {
+                    if (!CoachSocialMediaExists(coachSocialMedia.Id))
+                    {
+                        return NotFound();
+                    }
+                    else
+                    {
+                        throw;
+                    }
+                }
+                return RedirectToAction("ViewSocialMedia", new { id = coachSocialMedia.Id });
+            }
+            return View("AddSocialMedia", coachSocialMedia); // Return to edit view if validation fails
+        }
+        private bool CoachSocialMediaExists(int id)
+        {
+            return _context.CoachSocialMedias.Any(e => e.Id == id);
         }
     }
 }
