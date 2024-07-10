@@ -2,14 +2,10 @@
 
 @{
     ViewData["Title"] = "Add Availability";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+    Layout = "~/Views/Shared/_Public.cshtml";
 }
 
 <h1>Add Availability</h1>
-@if (ViewBag.CoachId != null)
-{
-    <input type="hidden" asp-for="CoachId" value="@ViewBag.CoachId" />
-}
 
 <form asp-action="Create">
     <input type="hidden" asp-for="CoachId" />
@@ -26,28 +22,71 @@
         <span asp-validation-for="FacilityContactEmail" class="text-danger"></span>
     </div>
 
+    <h3>Coach Business Hours</h3>
     <div class="form-group">
-        <label asp-for="MondayHours" class="control-label"></label>
+        <label asp-for="SundayHours" class="control-label">Sunday:</label>
+        <input asp-for="SundayHours" class="form-control" />
+        <span asp-validation-for="SundayHours" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MondayHours" class="control-label">Monday:</label>
         <input asp-for="MondayHours" class="form-control" />
         <span asp-validation-for="MondayHours" class="text-danger"></span>
     </div>
-
     <div class="form-group">
-        <label asp-for="TuesdayHours" class="control-label"></label>
+        <label asp-for="TuesdayHours" class="control-label">Tuesday:</label>
         <input asp-for="TuesdayHours" class="form-control" />
         <span asp-validation-for="TuesdayHours" class="text-danger"></span>
     </div>
+    <div class="form-group">
+        <label asp-for="WednesdayHours" class="control-label">Wednesday:</label>
+        <input asp-for="WednesdayHours" class="form-control" />
+        <span asp-validation-for="WednesdayHours" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ThursdayHours" class="control-label">Thursday:</label>
+        <input asp-for="ThursdayHours" class="form-control" />
+        <span asp-validation-for="ThursdayHours" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FridayHours" class="control-label">Friday:</label>
+        <input asp-for="FridayHours" class="form-control" />
+        <span asp-validation-for="FridayHours" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="SaturdayHours" class="control-label">Saturday:</label>
+        <input asp-for="SaturdayHours" class="form-control" />
+        <span asp-validation-for="SaturdayHours" class="text-danger"></span>
+    </div>
+
+    <h3>Holiday Hours</h3>
+    <div class="form-group">
+        <label asp-for="HolidayName" class="control-label"></label>
+        <input asp-for="HolidayName" class="form-control" />
+        <span asp-validation-for="HolidayName" class="text-danger"></span>
+    </div>
 
     <div class="form-group">
-        <input type="submit" value="Save" class="btn btn-primary" />
+        <label asp-for="HolidayHours" class="control-label"></label>
+        <input asp-for="HolidayHours" class="form-control" />
+        <span asp-validation-for="HolidayHours" class="text-danger"></span>
     </div>
+
+    <h3>Scheduled Holidays</h3>
+    <div class="form-group">
+        <label asp-for="ScheduledHolidays" class="control-label"></label>
+        <textarea asp-for="ScheduledHolidays" class="form-control"></textarea>
+        <span asp-validation-for="ScheduledHolidays" class="text-danger"></span>
+    </div>
+
+    <h3>Additional Notes</h3>
+    <div class="form-group">
+        <label asp-for="AdditionalNotes" class="control-label"></label>
+        <textarea asp-for="AdditionalNotes" class="form-control"></textarea>
+        <span asp-validation-for="AdditionalNotes" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to Coaches</a>
+
 </form>
-
-<div class="form-group">
-    <a asp-controller="Coaches" asp-action="Index" class="btn btn-secondary">Back to Coaches</a>
-</div>
-
-
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}

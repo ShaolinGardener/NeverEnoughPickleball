@@ -265,5 +265,12 @@ namespace NEP.Controllers
         {
             return _context.CoachSocialMedias.Any(e => e.Id == id);
         }
+
+        // GET: Coaches/AddAvailability/5
+        public IActionResult AddAvailability(int coachId)
+        {
+            return RedirectToAction("Create", "Availabilities", new { coachId = coachId });
+        }
+
     }
 }

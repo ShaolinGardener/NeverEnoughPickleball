@@ -1,0 +1,96 @@
+﻿@model NEP.Models.Availability
+
+@{
+    ViewData["Title"] = "Create Availability";
+    Layout = "~/Views/Shared/_Public.cshtml";
+}
+
+<h1>Create Availability</h1>
+
+<form asp-action="SaveAvailability" method="post">
+    <input type="hidden" asp-for="Id" />
+    <input type="hidden" asp-for="CoachId" value="@ViewBag.CoachId" />
+
+    <div class="form-group">
+        <label asp-for="FacilityName" class="control-label">Facility Name</label>
+        <input asp-for="FacilityName" class="form-control" />
+        <span asp-validation-for="FacilityName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="FacilityContactEmail" class="control-label">Facility Contact Email</label>
+        <input asp-for="FacilityContactEmail" class="form-control" />
+        <span asp-validation-for="FacilityContactEmail" class="text-danger"></span>
+    </div>
+
+    <div>
+        <h4>Coach Business Hours</h4>
+        <div class="form-group">
+            <label asp-for="MondayHours" class="control-label">Monday</label>
+            <input asp-for="MondayHours" class="form-control" />
+            <span asp-validation-for="MondayHours" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="TuesdayHours" class="control-label">Tuesday</label>
+            <input asp-for="TuesdayHours" class="form-control" />
+            <span asp-validation-for="TuesdayHours" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="WednesdayHours" class="control-label">Wednesday</label>
+            <input asp-for="WednesdayHours" class="form-control" />
+            <span asp-validation-for="WednesdayHours" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="ThursdayHours" class="control-label">Thursday</label>
+            <input asp-for="ThursdayHours" class="form-control" />
+            <span asp-validation-for="ThursdayHours" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="FridayHours" class="control-label">Friday</label>
+            <input asp-for="FridayHours" class="form-control" />
+            <span asp-validation-for="FridayHours" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SaturdayHours" class="control-label">Saturday</label>
+            <input asp-for="SaturdayHours" class="form-control" />
+            <span asp-validation-for="SaturdayHours" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SundayHours" class="control-label">Sunday</label>
+            <input asp-for="SundayHours" class="form-control" />
+            <span asp-validation-for="SundayHours" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div>
+        <h4>Holiday Hours</h4>
+        <div class="form-group">
+            <label asp-for="HolidayName" class="control-label">Holiday Name</label>
+            <input asp-for="HolidayName" class="form-control" />
+            <span asp-validation-for="HolidayName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="HolidayHours" class="control-label">Holiday Hours</label>
+            <input asp-for="HolidayHours" class="form-control" />
+            <span asp-validation-for="HolidayHours" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div>
+        <h4>Scheduled Holidays</h4>
+        <div class="form-group">
+            <textarea asp-for="ScheduledHolidays" class="form-control"></textarea>
+            <span asp-validation-for="ScheduledHolidays" class="text-danger"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AdditionalNotes" class="control-label">Additional Notes</label>
+        <textarea asp-for="AdditionalNotes" class="form-control"></textarea>
+        <span asp-validation-for="AdditionalNotes" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to Coaches</a>
+
+</form>

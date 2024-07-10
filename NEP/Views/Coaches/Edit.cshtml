@@ -51,7 +51,7 @@
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
                 <input type="button" value="Cancel" onclick="window.location='/Coaches';" class="btn btn-secondary" />
-                <a asp-controller="Availabilities" asp-action="Create" asp-route-coachId="@Model.Id" class="btn btn-primary">Add Availability</a>
+                <a asp-action="AddAvailability" asp-route-coachId="@Model.Id" class="btn btn-primary">Add Availability</a>
             </div>
         </form>
     </div>

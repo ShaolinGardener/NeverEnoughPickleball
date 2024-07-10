@@ -1,0 +1,82 @@
+﻿@model NEP.Models.Availability
+
+@{
+    ViewData["Title"] = "Availability Details";
+    Layout = "~/Views/Shared/_Public.cshtml";
+}
+
+<h1>Availability Details</h1>
+
+<div>
+    <h4>Facility Details</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Facility Name</dt>
+        <dd class="col-sm-10">@Model.FacilityName</dd>
+
+        <dt class="col-sm-2">Facility Contact Email</dt>
+        <dd class="col-sm-10">@Model.FacilityContactEmail</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Coach Business Hours</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Monday</dt>
+        <dd class="col-sm-10">@Model.MondayHours</dd>
+
+        <dt class="col-sm-2">Tuesday</dt>
+        <dd class="col-sm-10">@Model.TuesdayHours</dd>
+
+        <dt class="col-sm-2">Wednesday</dt>
+        <dd class="col-sm-10">@Model.WednesdayHours</dd>
+
+        <dt class="col-sm-2">Thursday</dt>
+        <dd class="col-sm-10">@Model.ThursdayHours</dd>
+
+        <dt class="col-sm-2">Friday</dt>
+        <dd class="col-sm-10">@Model.FridayHours</dd>
+
+        <dt class="col-sm-2">Saturday</dt>
+        <dd class="col-sm-10">@Model.SaturdayHours</dd>
+
+        <dt class="col-sm-2">Sunday</dt>
+        <dd class="col-sm-10">@Model.SundayHours</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Holiday Hours</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Holiday Name</dt>
+        <dd class="col-sm-10">@Model.HolidayName</dd>
+
+        <dt class="col-sm-2">Holiday Hours</dt>
+        <dd class="col-sm-10">@Model.HolidayHours</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Scheduled Holidays</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Scheduled Holidays</dt>
+        <dd class="col-sm-10">@Model.ScheduledHolidays</dd>
+    </dl>
+</div>
+
+<div>
+    <h4>Additional Notes</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Notes</dt>
+        <dd class="col-sm-10">@Model.AdditionalNotes</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to Coaches</a>
+</div>

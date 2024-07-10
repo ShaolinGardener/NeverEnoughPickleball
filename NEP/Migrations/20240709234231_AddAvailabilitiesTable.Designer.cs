@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NEP.Data;
 
@@ -11,9 +12,11 @@ using NEP.Data;
 namespace NEP.Migrations
 {
     [DbContext(typeof(NEPContext))]
-    partial class NEPContextModelSnapshot : ModelSnapshot
+    [Migration("20240709234231_AddAvailabilitiesTable")]
+    partial class AddAvailabilitiesTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
