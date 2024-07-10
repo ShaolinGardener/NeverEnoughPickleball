@@ -17,16 +17,24 @@ namespace NEP.Controllers
         }
 
         // GET: Availabilities/Create
+        // GET: Availabilities/Create
         public IActionResult Create(int coachId)
         {
+            var availability = new Availability
+            {
+                CoachId = coachId,
+                Locations = new List<string>() // Initialize Locations
+            };
+
             ViewBag.CoachId = coachId;
-            return View();
+            return View(availability);
         }
+
 
         // POST: Availabilities/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,CoachId,FacilityName,FacilityContactEmail,MondayHours,TuesdayHours,WednesdayHours,ThursdayHours,FridayHours,SaturdayHours,SundayHours,HolidayName,HolidayHours,ScheduledHolidays,AdditionalNotes")] Availability availability)
+        public async Task<IActionResult> Create([Bind("Id,CoachId,FacilityName,FacilityContactEmail,MondayHours,TuesdayHours,WednesdayHours,ThursdayHours,FridayHours,SaturdayHours,SundayHours,HolidayDate,HolidayName,HolidayHours,ScheduledHolidays,AdditionalNotes,IsStandard,IsUniqueToFacility,Locations")] Availability availability)
         {
             if (ModelState.IsValid)
             {
@@ -36,6 +44,7 @@ namespace NEP.Controllers
             }
             return View(availability);
         }
+
 
         // GET: Availabilities/Details/5
         public async Task<IActionResult> Details(int? id)
@@ -74,7 +83,7 @@ namespace NEP.Controllers
         // POST: Availabilities/Edit/5
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,CoachId,FacilityName,FacilityContactEmail,MondayHours,TuesdayHours,WednesdayHours,ThursdayHours,FridayHours,SaturdayHours,SundayHours,HolidayName,HolidayHours,ScheduledHolidays,AdditionalNotes")] Availability availability)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,CoachId,FacilityName,FacilityContactEmail,MondayHours,TuesdayHours,WednesdayHours,ThursdayHours,FridayHours,SaturdayHours,SundayHours,HolidayDate,HolidayName,HolidayHours,ScheduledHolidays,AdditionalNotes,IsStandard,IsUniqueToFacility,Locations")] Availability availability)
         {
             if (id != availability.Id)
             {

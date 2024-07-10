@@ -1,82 +1,136 @@
 ﻿@model NEP.Models.Availability
 
-@{
-    ViewData["Title"] = "Availability Details";
-    Layout = "~/Views/Shared/_Public.cshtml";
-}
-
-<h1>Availability Details</h1>
-
 <div>
-    <h4>Facility Details</h4>
+    <h4>Availability</h4>
     <hr />
     <dl class="row">
-        <dt class="col-sm-2">Facility Name</dt>
-        <dd class="col-sm-10">@Model.FacilityName</dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FacilityName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FacilityName)
+        </dd>
 
-        <dt class="col-sm-2">Facility Contact Email</dt>
-        <dd class="col-sm-10">@Model.FacilityContactEmail</dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FacilityContactEmail)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FacilityContactEmail)
+        </dd>
+
+        <dt class="col-sm-2">
+            Availability Options
+        </dt>
+        <dd class="col-sm-10">
+            @if (Model.IsStandard)
+            {
+                <span>Standard</span>
+            }
+            else if (Model.IsUniqueToFacility)
+            {
+                <span>Unique to Facility</span>
+            }
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SundayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SundayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.MondayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.MondayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.TuesdayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.TuesdayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.WednesdayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.WednesdayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ThursdayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ThursdayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FridayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FridayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SaturdayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SaturdayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HolidayDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HolidayDate)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HolidayName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HolidayName)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.HolidayHours)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.HolidayHours)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ScheduledHolidays)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ScheduledHolidays)
+        </dd>
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.AdditionalNotes)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.AdditionalNotes)
+        </dd>
+
+        <dt class="col-sm-2">
+            Locations
+        </dt>
+        <dd class="col-sm-10">
+            <ul>
+                @foreach (var location in Model.Locations)
+                {
+                    <li>@location</li>
+                }
+            </ul>
+        </dd>
     </dl>
 </div>
 
 <div>
-    <h4>Coach Business Hours</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">Monday</dt>
-        <dd class="col-sm-10">@Model.MondayHours</dd>
-
-        <dt class="col-sm-2">Tuesday</dt>
-        <dd class="col-sm-10">@Model.TuesdayHours</dd>
-
-        <dt class="col-sm-2">Wednesday</dt>
-        <dd class="col-sm-10">@Model.WednesdayHours</dd>
-
-        <dt class="col-sm-2">Thursday</dt>
-        <dd class="col-sm-10">@Model.ThursdayHours</dd>
-
-        <dt class="col-sm-2">Friday</dt>
-        <dd class="col-sm-10">@Model.FridayHours</dd>
-
-        <dt class="col-sm-2">Saturday</dt>
-        <dd class="col-sm-10">@Model.SaturdayHours</dd>
-
-        <dt class="col-sm-2">Sunday</dt>
-        <dd class="col-sm-10">@Model.SundayHours</dd>
-    </dl>
-</div>
-
-<div>
-    <h4>Holiday Hours</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">Holiday Name</dt>
-        <dd class="col-sm-10">@Model.HolidayName</dd>
-
-        <dt class="col-sm-2">Holiday Hours</dt>
-        <dd class="col-sm-10">@Model.HolidayHours</dd>
-    </dl>
-</div>
-
-<div>
-    <h4>Scheduled Holidays</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">Scheduled Holidays</dt>
-        <dd class="col-sm-10">@Model.ScheduledHolidays</dd>
-    </dl>
-</div>
-
-<div>
-    <h4>Additional Notes</h4>
-    <hr />
-    <dl class="row">
-        <dt class="col-sm-2">Notes</dt>
-        <dd class="col-sm-10">@Model.AdditionalNotes</dd>
-    </dl>
-</div>
-
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
-    <a asp-action="Index" class="btn btn-secondary">Back to Coaches</a>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
 </div>

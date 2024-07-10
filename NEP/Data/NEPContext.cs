@@ -107,6 +107,12 @@ namespace NEP.Data
 			modelBuilder.Entity<DistanceInMiles>()
 				.HasNoKey();
 
+            modelBuilder.Entity<Availability>()
+                .Property(a => a.LocationsJson)
+                .HasConversion(
+                    v => v,
+                    v => v
+                );
 
             //modelBuilder.Entity<Coach>()
             //    .HasOne(c => c.CoachSocialMedia)
