@@ -36,9 +36,6 @@ namespace NEP.Data
 		public DbSet<Court> Courts { get; set; }
 		public DbSet<CourtColors> CourtColors { get; set; }
         public DbSet<Images> Images { get; set; }
-        public DbSet<Coach> Coaches { get; set; }
-        public DbSet<CoachSocialMedia> CoachSocialMedias { get; set; }
-        public DbSet<Availability> Availabilities { get; set; }
 
 
         public DbSet<CalendarNotification> CalendarNotifications { get; set; }
@@ -107,12 +104,7 @@ namespace NEP.Data
 			modelBuilder.Entity<DistanceInMiles>()
 				.HasNoKey();
 
-            modelBuilder.Entity<Availability>()
-                .Property(a => a.LocationsJson)
-                .HasConversion(
-                    v => v,
-                    v => v
-                );
+           
 
             //modelBuilder.Entity<Coach>()
             //    .HasOne(c => c.CoachSocialMedia)
