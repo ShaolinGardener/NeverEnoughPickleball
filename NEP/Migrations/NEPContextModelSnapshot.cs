@@ -90,6 +90,74 @@ namespace NEP.Migrations
                     b.ToTable("Attendees");
                 });
 
+            modelBuilder.Entity("NEP.Models.Availability", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AdditionalNotes")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("CoachId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("FacilityContactEmail")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FacilityName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("FridayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HolidayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("HolidayName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MondayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SaturdayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ScheduledHolidays")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SundayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ThursdayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TuesdayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WednesdayHours")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Availabilities");
+                });
+
             modelBuilder.Entity("NEP.Models.CalendarNotification", b =>
                 {
                     b.Property<Guid>("UID")
@@ -200,8 +268,6 @@ namespace NEP.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("CoachId");
 
                     b.ToTable("CoachSocialMedias");
                 });
@@ -998,17 +1064,6 @@ namespace NEP.Migrations
                     b.HasOne("NEP.Models.CalendarNotification", null)
                         .WithMany("Attendees")
                         .HasForeignKey("CalendarNotificationUID");
-                });
-
-            modelBuilder.Entity("NEP.Models.CoachSocialMedia", b =>
-                {
-                    b.HasOne("NEP.Models.Coach", "Coach")
-                        .WithMany()
-                        .HasForeignKey("CoachId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Coach");
                 });
 
             modelBuilder.Entity("NEP.Models.Court", b =>
