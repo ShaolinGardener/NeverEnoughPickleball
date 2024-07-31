@@ -24,6 +24,10 @@ namespace NEP.Models
         public string? UserName { get; set; }
         public string? Password { get; set; }
 
+        public string MemberType { get; set; }
+        
+        [Phone]
+        public string MobileNumber { get; set; }
         public bool IsActive { get; set; }
         [Required]
         public string Phone { get; set; } = string.Empty;
