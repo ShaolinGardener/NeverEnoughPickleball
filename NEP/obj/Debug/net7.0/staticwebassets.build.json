@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0f4Ib/qF16vYQ9DnqexAm7KnMwrfpMLmyvLakhJIPXg=",
+  "Hash": "PXOgf+VEDh832BbFbM3npgyBK2WIFpctEqNrdAwYOBI=",
   "Source": "NEP",
   "BasePath": "_content/NEP",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/Colors and Shit.txt"
+    },
+    {
+      "Identity": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/wwwroot/css/become-a-member.css",
+      "SourceId": "NEP",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/wwwroot/",
+      "BasePath": "_content/NEP",
+      "RelativePath": "css/become-a-member.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/become-a-member.css"
     },
     {
       "Identity": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/wwwroot/css/boot-business.css",

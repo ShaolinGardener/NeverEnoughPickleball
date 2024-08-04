@@ -36,6 +36,7 @@ namespace NEP.Data
 		public DbSet<Court> Courts { get; set; }
 		public DbSet<CourtColors> CourtColors { get; set; }
         public DbSet<Images> Images { get; set; }
+        public DbSet<Member> Members { get; set; }
 
 
         public DbSet<CalendarNotification> CalendarNotifications { get; set; }

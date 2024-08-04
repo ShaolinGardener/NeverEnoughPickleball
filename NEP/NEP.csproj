@@ -16,6 +16,7 @@
     <Folder Include="wwwroot\TempFiles\" />
     <Folder Include="wwwroot\static\Financials\" />
     <Folder Include="wwwroot\static\Policies\" />
+    <Folder Include="Views\Member\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -47,4 +48,16 @@
     <Using Include="Microsoft.EntityFrameworkCore.SqlServer" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Views\Member\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Views\Member\BecomeAMember.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Views\Member\BecomeAMember.html">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
 </Project>

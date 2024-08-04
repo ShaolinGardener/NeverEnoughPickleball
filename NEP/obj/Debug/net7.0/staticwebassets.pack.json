@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/assets/Colors and Shit.txt"
     },
     {
+      "Id": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/wwwroot/css/become-a-member.css",
+      "PackagePath": "staticwebassets/css/become-a-member.css"
+    },
+    {
       "Id": "/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/wwwroot/css/boot-business.css",
       "PackagePath": "staticwebassets/css/boot-business.css"
     },

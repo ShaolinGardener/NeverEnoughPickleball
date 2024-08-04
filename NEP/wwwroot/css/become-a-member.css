@@ -1,0 +1,319 @@
+.membership-form .container {
+    m- [0_0_4px_0] w-[2.4px] h-[2.4px]
+}
+
+.membership-form .container-1 {
+    rounded- [5px] border-[1px_solid_rgba(252,100,5,0.25)] bg-[rgba(255,120,0,0.1)] relative m-[0_114px_20px_114px] flex flex-row justify-between p-[22px_34px_22px_39.7px] w-[1210px] box-sizing-border
+}
+
+.membership-form {
+    border- [1px_solid_rgba(0,0,0,0.2)] bg-[#F3F3F3] flex flex-col p-[29px_0_0_0] w-[1440px] box-sizing-border
+}
+
+    .membership-form .quickly-build-beauti {
+        m- [0_114px_28px_114px] inline-block self-start break-words font-['Gilroy-Regular','Roboto_Condensed'] font-normal text-[16px] leading-[1.75] text-[#000000]
+    }
+
+    .membership-form .blocks-headers-header-5-dark {
+        shadow- [0px_2px_4px_0px_rgba(0,0,0,0.044)] rounded-[5px] border-[1px_solid_#F2F4F6] bg-[#FFFFFF] relative m-[0_114px_56px_114px] flex flex-row justify-between p-[7px_19px_4px_17px] w-[1440px] box-sizing-border
+    }
+
+    .membership-form .group-35 {
+        m- [13px_0_13px_0] flex flex-row justify-between w-[400px] h-[fit-content] box-sizing-border
+    }
+
+    .membership-form .home {
+        opacity-80 m-[0_14px_0_0] w-[38px] break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .pricing {
+        opacity-80 break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .contact {
+        opacity-80 break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .faq {
+        opacity-80 break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .faq-1 {
+        opacity-80 m-[0_0px_0_0] break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .group-7 {
+        relative flex p-[8px_0_9px_3px] w-[137px] box-sizing-border
+    }
+
+    .membership-form .rectangle-4-copy {
+        opacity-40 rounded-[5px] border-[1px_solid_#222222] absolute right-[0px] bottom-[0px] w-[136px] h-[45px]
+    }
+
+    .membership-form .view-all-templates {
+        relative break-words font-['Gilroy-Regular','Roboto_Condensed'] font-normal text-[16px] leading-[1.75] text-[#FFFFFF]
+    }
+
+    .membership-form .elements-buttons-small-normal {
+        absolute left-[50%] bottom-[0px] translate-x-[-50%] flex p-[9px_0_8px_1.1px] w-[137px] box-sizing-border
+    }
+
+    .membership-form .group-8 {
+        relative m-[0_10px_0_0] flex p-[8px_0_9px_3px] w-[137px] box-sizing-border
+    }
+
+    .membership-form .rectangle-4-copy-1 {
+        opacity-40 rounded-[5px] border-[1px_solid_#222222] absolute right-[0px] bottom-[0px] w-[136px] h-[45px]
+    }
+
+    .membership-form .view-all-templates-1 {
+        relative break-words font-['Gilroy-Regular','Roboto_Condensed'] font-normal text-[16px] leading-[1.75] text-[#FFFFFF]
+    }
+
+    .membership-form .elements-buttons-small-normal-1 {
+        absolute left-[50%] bottom-[0px] translate-x-[-50%] flex p-[9px_0_8px_1.1px] w-[137px] box-sizing-border
+    }
+
+    .membership-form .nep-retina-img-1 {
+        relative flex p-[3.6px_1.9px_13.1px_5.2px] box-sizing-border
+    }
+
+    .membership-form .vector {
+        absolute top-[1.9px] right-[0px] w-[55.6px] h-[52.1px]
+    }
+
+    .membership-form .vector-1 {
+        absolute left-[0px] top-[0px] w-[55.6px] h-[44.9px]
+    }
+
+    .membership-form .pickleball {
+        m- [0_9.6px_0_0] break-words font-['Gilroy-Heavy','Roboto_Condensed'] font-normal text-[8.1px] text-[#FFFFFF]
+    }
+
+    .membership-form .enough {
+        absolute left-[5.1px] top-[50%] translate-y-[-50%] break-words font-['Gilroy-Heavy','Roboto_Condensed'] font-normal text-[11px] text-[#FFFFFF]
+    }
+
+    .membership-form .never {
+        absolute left-[5.2px] top-[14.1px] break-words font-['Gilroy-Heavy','Roboto_Condensed'] font-normal text-[8.4px] text-[#FFFFFF]
+    }
+
+    .membership-form .vector-4 {
+        m- [0_11.5px_11px_11.5px] w-[9.9px] h-[9.9px]
+    }
+
+    .membership-form .nep-volunteer-oppotunities {
+        m- [0_14px_0_0] w-[308px] break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[24px] leading-[1.167] text-[#FF7800]
+    }
+
+    .membership-form .quickly-build-beauti-1 {
+        break-words font-['Poppins'] font-extrabold text-[42px] leading-[0.667] text-[#FFFFFF]
+    }
+
+    .membership-form .quickly-build-beauti-2 {
+        m- [0_14px_0_0] w-[193px] break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[24px] leading-[1.167] text-[#FF7800]
+    }
+
+    .membership-form .line-1 {
+        bg- [#FF7800] m-[0_114px_27px_114px] w-[1210px] h-[0px]
+    }
+
+    .membership-form .frame-83 {
+        rounded- [10px] m-[9px_0_12px_0] flex w-[44px] h-[44px] box-sizing-border
+    }
+
+    .membership-form .frame-84 {
+        rounded- [10px] m-[11px_0_10px_0] flex w-[44px] h-[44px] box-sizing-border
+    }
+
+    .membership-form .frame-85 {
+        rounded- [10px] m-[11px_0_10px_0] flex w-[44px] h-[44px] box-sizing-border
+    }
+
+    .membership-form .frame-86 {
+        rounded- [10px] m-[11px_0_10px_0] flex w-[44px] h-[44px] box-sizing-border
+    }
+
+    .membership-form .frame-88 {
+        rounded- [10px] m-[11px_0_10px_0] flex w-[44px] h-[44px] box-sizing-border
+    }
+
+    .membership-form .frame-87 {
+        rounded- [10px] m-[11px_0_10px_0] flex w-[44px] h-[44px] box-sizing-border
+    }
+
+    .membership-form .play-info {
+        m- [0_14px_0_0] w-[96px] break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[24px] leading-[1.167] text-[#FF7800]
+    }
+
+    .membership-form .personal-bio {
+        m- [0_14px_0_0] w-[137px] break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[24px] leading-[1.167] text-[#FF7800]
+    }
+
+    .membership-form .played-courts-facilities {
+        m- [0_14px_0_0] w-[273px] break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[24px] leading-[1.167] text-[#FF7800]
+    }
+
+    .membership-form .available-courts-facilities-if-not-listed-above {
+        m- [0_14px_0_0] w-[527px] break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[24px] leading-[1.167] text-[#FF7800]
+    }
+
+    .membership-form .group-37 {
+        flex flex-col w-[1441px] box-sizing-border
+    }
+
+    .membership-form .ui-interactions-buttons-cta-big-normal {
+        relative m-[0_114px_100px_114px] flex self-start p-[14px_0_16px_1px] w-[240px] box-sizing-border
+    }
+
+    .membership-form .group-351 {
+        relative flex flex-row justify-between p-[20px_127.8px_23px_0] w-[1441px] box-sizing-border
+    }
+
+    .membership-form .blocks-footers-footer-3-dark-copy {
+        bg- [#FFFFFF] absolute left-[0px] top-[0px] right-[0px] bottom-[0px] p-[38px_0_38px_0] h-[100%] box-sizing-border
+    }
+
+    .membership-form .home-1 {
+        opacity-80 m-[0_14px_0_0] w-[38px] break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .pricing-1 {
+        opacity-80 break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .contact-1 {
+        opacity-80 break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .faq-2 {
+        opacity-80 break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .faq-3 {
+        opacity-80 break-words font-['Gilroy-Medium','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#000000]
+    }
+
+    .membership-form .layer-x-00201 {
+        relative flex p-[3.6px_1.9px_13.1px_5.2px] box-sizing-border
+    }
+
+    .membership-form .vector-5 {
+        absolute top-[1.9px] right-[0px] w-[55.6px] h-[52.1px]
+    }
+
+    .membership-form .vector-6 {
+        absolute left-[0px] top-[0px] w-[55.6px] h-[44.9px]
+    }
+
+    .membership-form .pickleball-1 {
+        m- [0_9.6px_0_0] break-words font-['Gilroy-Heavy','Roboto_Condensed'] font-normal text-[8.1px] text-[#FFFFFF]
+    }
+
+    .membership-form .enough-1 {
+        absolute left-[5.1px] top-[50%] translate-y-[-50%] break-words font-['Gilroy-Heavy','Roboto_Condensed'] font-normal text-[11px] text-[#FFFFFF]
+    }
+
+    .membership-form .never-1 {
+        absolute left-[5.2px] top-[14.1px] break-words font-['Gilroy-Heavy','Roboto_Condensed'] font-normal text-[8.4px] text-[#FFFFFF]
+    }
+
+    .membership-form .vector-9 {
+        m- [0_11.5px_11px_11.5px] w-[9.9px] h-[9.9px]
+    }
+
+    .membership-form .container-2 {
+        rounded- [5px] border-[1px_solid_rgba(252,100,5,0.25)] bg-[rgba(255,120,0,0.1)] relative m-[0_114px_32px_114px] flex flex-row justify-between p-[22px_34px_22px_55.7px] w-[1210px] box-sizing-border
+    }
+
+    .membership-form .container-3 {
+        rounded- [5px] border-[1px_solid_rgba(252,100,5,0.25)] bg-[rgba(255,120,0,0.1)] relative m-[0_114px_20px_114px] flex flex-row justify-between p-[24px_34px_20px_34px] w-[1210px] box-sizing-border
+    }
+
+    .membership-form .container-4 {
+        relative flex flex-col items-end box-sizing-border
+    }
+
+    .membership-form .container-5 {
+        rounded- [5px] border-[1px_solid_rgba(252,100,5,0.25)] bg-[rgba(255,120,0,0.1)] relative m-[0_114px_20px_114px] flex flex-row justify-between p-[22px_34px_22px_23.6px] w-[1210px] box-sizing-border
+    }
+
+    .membership-form .container-6 {
+        rounded- [5px] border-[1px_solid_rgba(252,100,5,0.25)] bg-[rgba(255,120,0,0.1)] relative m-[0_114px_20px_114px] flex flex-row justify-between p-[22px_34px_22px_37.8px] w-[1210px] box-sizing-border
+    }
+
+    .membership-form .container-7 {
+        rounded- [5px] border-[1px_solid_rgba(252,100,5,0.25)] bg-[rgba(255,120,0,0.1)] relative m-[0_114px_20px_114px] flex flex-row justify-between p-[22px_34px_22px_25.8px] w-[1210px] box-sizing-border
+    }
+
+    .membership-form .container-8 {
+        m- [0_0_4px_0] w-[2.4px] h-[2.4px]
+    }
+
+    .membership-form .container-9 {
+        relative m-[18px_0px_8px_0] flex flex-row justify-between w-[389.2px] h-[fit-content] box-sizing-border
+    }
+
+    .membership-form .container-10 {
+        rounded- [5px] bg-[#FF7800] relative m-[0_114px_28px_114px] p-[23px_17.1px_19px_17.1px] w-[fit-content] box-sizing-border
+    }
+
+    .membership-form .container-11 {
+        m- [3px_0_6px_0] flex flex-row w-[284px] h-[fit-content] box-sizing-border
+    }
+
+    .membership-form .container-12 {
+        relative flex flex-col items-end box-sizing-border
+    }
+
+    .membership-form .rectangle-4 {
+        shadow- [0px_2px_4px_0px_rgba(0,0,0,0.044)] rounded-[5px] absolute left-[0px] top-[0px] right-[0px] bottom-[0px] h-[100%]
+    }
+
+    .membership-form .normal-cta {
+        opacity-80 relative break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#FFFFFF]
+    }
+
+    .membership-form .rectangle-41 {
+        shadow- [0px_2px_4px_0px_rgba(0,0,0,0.044)] rounded-[5px] absolute left-[0px] top-[0px] right-[0px] bottom-[0px] h-[100%]
+    }
+
+    .membership-form .normal-cta-1 {
+        opacity-80 relative break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[14px] leading-[2] text-[#FF7800]
+    }
+
+    .membership-form .icon {
+        w- [14px] h-[7px]
+    }
+
+    .membership-form .icon-1 {
+        w- [14px] h-[7px]
+    }
+
+    .membership-form .icon-2 {
+        w- [14px] h-[7px]
+    }
+
+    .membership-form .icon-3 {
+        w- [14px] h-[7px]
+    }
+
+    .membership-form .icon-4 {
+        w- [14px] h-[7px]
+    }
+
+    .membership-form .icon-5 {
+        w- [14px] h-[7px]
+    }
+
+    .membership-form .rectangle-42 {
+        shadow- [0px_4px_13px_0px_rgba(0,0,0,0.044)] rounded-[5px] absolute left-[50%] top-[0px] translate-x-[-50%] w-[240px] h-[58px]
+    }
+
+    .membership-form .big-cta {
+        relative break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[16px] leading-[1.75] text-[#FFFFFF]
+    }
+
+    .membership-form .acme-company {
+        opacity-80 break-words font-['Gilroy-Bold','Roboto_Condensed'] font-normal text-[13px] leading-[1.615] text-[#000000]
+    }

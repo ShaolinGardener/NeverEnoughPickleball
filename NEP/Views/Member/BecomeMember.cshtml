@@ -1,0 +1,636 @@
+﻿@page
+@model NEP.Models.Member
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Members Page</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .Rectangle {
+            border: solid 1px #f2f4f6;
+            background-color: #fff;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+        }
+
+        .Rectangle-29 {
+            background-color: #ff7800;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .Quickly-build-beauti {
+            color: #fff;
+        }
+
+        .Additional-info {
+            font-family: Gilroy, sans-serif;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .Rectangle-30 {
+            border: solid 1px rgba(252, 100, 5, 0.25);
+            background-color: rgba(255, 120, 0, 0.1);
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .Big-CTA {
+            font-family: Gilroy, sans-serif;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #ff7800;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .Blocks-Footers-Footer-3-Dark-Copy {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .IconOutlineChevron-Down {
+            width: 24px;
+            height: 24px;
+            flex-grow: 0;
+            object-fit: contain;
+        }
+
+        .Vector {
+            background-color: #fc6405;
+        }
+
+        .panel-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .panel-body {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-top: none;
+            display: none;
+        }
+
+        .caret {
+            border-top: 4px solid;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+            display: inline-block;
+            width: 0;
+            height: 0;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .Rectangle-17 {
+            width: 352px;
+            height: 45px;
+            margin: 0 44px 32px 0;
+            padding: 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+            border: solid 1px rgba(0, 0, 0, 0.35);
+        }
+
+            /* Style for input fields inside Rectangle-17 */
+            .Rectangle-17 input.form-control {
+                width: 100%;
+                height: 100%;
+                padding: 0 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #fff;
+                color: #000; 
+            }
+
+            /* Placeholder text styling */
+            .Rectangle-17 input::placeholder {
+                opacity: 0.8;
+                font-family: 'Gilroy', sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 2;
+                color: rgba(0, 0, 0, 0.35);
+            }
+        .Rectangle-17-Large {
+            width: 100%; /* Full width */
+            max-width: 1142px; /* Maximum width */
+            height: 116px;
+            padding: 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.04);
+            border: solid 1px rgba(0, 0, 0, 0.35);
+            margin: 0 auto; /* Center horizontally */
+        }
+
+            .Rectangle-17-Large textarea.form-control {
+                width: 100%;
+                height: 100%;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-color: #fff;
+                color: #000;
+                box-sizing: border-box;
+                font-family: 'Gilroy', sans-serif;
+                font-size: 14px;
+            }
+
+            .Rectangle-17-Large textarea::placeholder {
+                opacity: 0.8;
+                font-family: 'Gilroy', sans-serif;
+                font-size: 14px;
+                font-weight: bold;
+                color: rgba(0, 0, 0, 0.35);
+            }
+
+        .Quickly-build-beauti {
+            width: 865px;
+            height: 28px;
+            margin: 27.4px auto 8.6px;
+            font-family: 'Gilroy', sans-serif;
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.17;
+            text-align: center;
+            color: #ff7800;
+        }
+
+        .subscribe-info {
+            text-align: center;
+            font-family: 'Gilroy', sans-serif;
+            font-size: 14px;
+            color: #000;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .radio-buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .radio-button-group {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .radio-item {
+            display: flex;
+            align-items: center;
+        }
+
+        .Ellipse-14 {
+            width: 28px;
+            height: 28px;
+            margin: 0 16px 0 0;
+            border: solid 2px #ebebec;
+            background-color: #fff;
+            position: relative;
+        }
+
+            .Ellipse-14 input[type="radio"] {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+            }
+
+        .radio-content {
+            font-family: 'Gilroy', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.5;
+            color: #05060f;
+        }
+        .-subscribe-member {
+            width: 498px;
+            height: 24px;
+            margin: 8.6px 348px 20px 33px;
+            font-family: Gilroy-☞;
+            font-size: 16px;
+            font-weight: 500;
+            font-stretch: normal;
+            font-style: normal;
+            line-height: 1.5;
+            letter-spacing: -0.24px;
+            text-align: left;
+            color: rgba(0, 0, 0, 0.35);
+        }
+        .icon-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 800px; /* Adjust width as needed */
+            margin: 20px auto; /* Center the container and add vertical spacing */
+        }
+
+        .icon-item {
+            display: flex;
+            align-items: center;
+            width: 23%; /* Adjust width to fit 4 items per row */
+            margin-bottom: 20px; /* Space between rows */
+        }
+
+        img.icon-pencil-edit-1 {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+
+        .icon-text {
+            font-family: Gilroy-☞;
+            font-size: 16px;
+            font-weight: 500;
+            color: #05060f;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <!-- Top Rectangle -->
+    <div class="Rectangle container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
+        <span class="Vector"></span>
+        <nav class="d-flex">
+            <span class="home mx-2">Home</span>
+            <span class="pricing mx-2">About</span>
+            <span class="faq mx-2">Mission</span>
+            <span class="faq mx-2">Program</span>
+            <span class="contact mx-2">Contact</span>
+        </nav>
+        <div>
+            <a href="#" class="btn Big-CTA mx-2">Login</a>
+            <a href="#" class="btn Big-CTA">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Membership Form Container -->
+    <div class="Membership-form container-fluid py-4">
+        <!-- Rectangle-29 Box -->
+        <div class="Rectangle-29">
+            Become a Member
+        </div>
+
+        <!-- Line-1 Divider -->
+        <div class="Line-1 bg-warning"></div>
+
+        <!-- Additional Information -->
+        <span class="Additional-info">
+            Want to stay informed of upcoming events, make use of our court scheduling and CourtChattr app, find ways to volunteer, be the first to know of new merchandise, and/or receive our newsletter of the latest progress in the pickleball community?
+        </span>
+
+        <!-- Rectangle-30 Boxes with Text and Icon -->
+        <div class="Rectangle-30" onclick="toggleSection('personalContact')">
+            <span>Personal Contact</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+        </div>
+        <div id="personalContact" class="panel-body">
+            <div class="row">
+                <div class="Rectangle-17 ">
+                    <input type="text" class="form-control " placeholder="First Name">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="Last Name">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="Screen Name">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="Company or Organization">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="date" class="form-control " placeholder="Date of Birth (Private)">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="Street (Private)">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="Apt, Suite Number">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="City">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="State">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control " placeholder="ZIP">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="tel" class="form-control " placeholder="Phone">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="email" class="form-control " placeholder="Email">
+                </div>
+            </div>
+            <div class="mt-4">
+                <label for="profilePic" class="form-label">Choose Profile Picture</label>
+                <input type="file" class="form-control" id="profilePic">
+            </div>
+            <div class="mt-2 text-sm text-gray-600">
+                Information above used for contact by Never Enough Pickleball websites and CourtChattr apps, for updates, new features, news only provided to coaches. Name, number, URL, phone made public where opt.
+            </div>
+            <button class="Big-CTA">Save</button>
+        </div>
+        <div class="Rectangle-30" onclick="toggleSection('playInfo')">
+            <span>Play Info</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+        </div>
+
+        <div id="playInfo" class="panel-body" style="display: none;">
+            <!-- Radio Buttons -->
+            <div class="radio-buttons">
+                <label><input type="radio" name="playType" value="fun"> Fun</label>
+                <label><input type="radio" name="playType" value="exercise"> Exercise</label>
+                <label><input type="radio" name="playType" value="socializing"> Socializing</label>
+                <label><input type="radio" name="playType" value="competition"> Competition</label>
+                <label><input type="radio" name="playType" value="tournaments"> Tournaments</label>
+            </div>
+
+            <!-- Text Boxes -->
+            <div class="Rectangle-17">
+                <input type="text" class="form-control" placeholder="Unofficial Rating">
+            </div>
+            <div class="Rectangle-17">
+                <input type="text" class="form-control" placeholder="DUPR Rating">
+            </div>
+            <div class="Rectangle-17">
+                <input type="text" class="form-control" placeholder="UTPR Rating">
+            </div>
+            <div class="Rectangle-17">
+                <input type="text" class="form-control" placeholder="Paddle Used">
+            </div>
+        </div>
+
+        <div class="Rectangle-30" onclick="toggleSection('personalBio')">
+            <span>Personal Bio</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+        </div>
+
+        <div id="personalBio" class="panel-body" style="display: none;">
+            <!-- Large Text Area -->
+            <div class="Rectangle-17-Large">
+                <textarea class="form-control" placeholder="In terms of pickleball, what are your expectations?*"></textarea>
+            </div>
+        </div>
+
+        <div class="Rectangle-30" onclick="toggleSection('nepVolunteerOpportunities')">
+            <span>NEP Volunteer Opportunities</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+        </div>
+        <div id="nepVolunteerOpportunities" class="panel-body" style="display: none;">
+            <span class="Quickly-build-beauti">
+                What volunteering interests do you have with Never Enough Pickleball, if any?
+            </span>
+            <p class="subscribe-member">
+                You can subscribe/unsubscribe at any time in your member settings
+            </p>
+            <div class="radio-buttons-container">
+                <div class="radio-button-group">
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer" value="Local Court Ambassador">
+                        Local Court Ambassador
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer" value="Local Event Staff">
+                        Local Event Staff
+                    </label>
+                </div>
+                <div class="radio-button-group">
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer" value="Stay Contributor">
+                        Stay Contributor
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer" value="Coaching">
+                        Coaching
+                    </label>
+                </div>
+                <div class="radio-button-group">
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer" value="School Liason">
+                        School Liason
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer" value="Photo Contributor">
+                        Photo Contributor
+                    </label>
+                </div>
+            </div>
+            <span class="Quickly-build-beauti">
+                What information would interest you through Never Enough Pickleball?
+            </span>
+            <p class="subscribe-member">
+                You can subscribe/unsubscribe at any time in your member settings
+            </p>
+            <div class="radio-buttons-container">
+                <div class="radio-button-group">
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer-additional" value="Upcoming Event/Tournament">
+                        Upcoming Event/Tournament
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer-additional" value="Pickleball Socials">
+                        Pickleball Socials
+                    </label>
+                </div>
+                <div class="radio-button-group">
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer-additional" value="Product Deals/Discounts">
+                        Product Deals/Discounts
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer-additional" value="Volunteering Opportunities">
+                        Volunteering Opportunities
+                    </label>
+                </div>
+                <div class="radio-button-group">
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer-additional" value="Pickleball Learning">
+                        Pickleball Learning
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="volunteer-additional" value="NEP Newsletter">
+                        NEP Newsletter
+                    </label>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="Rectangle-30" onclick="toggleSection('PlayedCourtsFacilities')">
+            <span>Played Courts/Facilities</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+        </div>
+        <div id="PlayedCourtsFacilities" class="panel-body" style="display: none;">
+            <div class="row">
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control" placeholder="State">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control" placeholder="City">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control" placeholder="Park/Facility">
+                </div>
+            </div>
+
+            <!-- Icon and Label Section -->
+            <div class="icon-container">
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">Candy Way Park</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">Dover Shoes Park</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">Groveview Park</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">Round Lake Park</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">Candy Land</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">Goldenrod Park</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">Phelps Park</span>
+                </div>
+                <div class="icon-item">
+                    <img src="img/icon-pencil-edit-1.png"
+                         srcset="img/icon-pencil-edit-1@2x.png 2x,
+                         img/icon-pencil-edit-1@3x.png 3x"
+                         class="icon-pencil-edit-1">
+                    <span class="icon-text">USTA National Campus</span>
+                </div>
+            </div>
+            <p class="subscribe-member">
+                Click & Drag your courts in order of regularity. Build your Pickleball Map!
+            </p>
+        </div>
+
+
+
+        <div class="Rectangle-30" onclick="toggleSection('availableCourts')">
+            <span>Available Courts/Facilities (if not listed above)</span>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+        </div>
+        <div id="availableCourts" class="panel-body" style="display: none;">
+            <div class="row">
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control" placeholder="Facilities Name">
+                </div>
+                <div class="Rectangle-17">
+                    <input type="text" class="form-control" placeholder="Facilities Contact Email to join NEP Member">
+
+                </div>
+                <div class="Rectangle-17-Large">
+                    <textarea class="form-control" placeholder="How Did you hear about Never Enough PickleBall?*"></textarea>
+                </div>
+                <div class="Rectangle-17-Large">
+                    <textarea class="form-control" placeholder="Suggestions for Never Enough PiclkleBall?"></textarea>
+                </div>
+            </div>
+
+            <!-- Other sections can be similarly added here -->
+            <!-- Big-CTA Button -->
+            <div class="text-center">
+                <span class="Big-CTA">Submit</span>
+            </div>
+
+            <div class="Blocks-Footers-Footer-3-Dark-Copy">
+                <span class="Vector"></span>
+                <div>© 2024 NeverEnoughPickleball</div>
+                <nav class="d-flex justify-content-center">
+                    <span class="home mx-2">Home</span>
+                    <span class="pricing mx-2">About</span>
+                    <span class="faq mx-2">Mission</span>
+                    <span class="faq mx-2">Program</span>
+                    <span class="contact mx-2">Contact</span>
+                </nav>
+            </div>
+        </div>
+        <div class="text-center">
+            <span class="Big-CTA">Submit</span>
+        </div>
+        <div class="Blocks-Footers-Footer-3-Dark-Copy">
+            <span class="Vector"></span>
+            <div>© 2024 NeverEnoughPickleball</div>
+            <nav class="d-flex justify-content-center">
+                <span class="home mx-2">Home</span>
+                <span class="pricing mx-2">About</span>
+                <span class="faq mx-2">Mission</span>
+                <span class="faq mx-2">Program</span>
+                <span class="contact mx-2">Contact</span>
+            </nav>
+        </div>
+
+        <!-- Include Bootstrap JS and dependencies -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>function toggleSection(sectionId) {
+                var section = document.getElementById(sectionId);
+                if (section.style.display === "none") {
+                    section.style.display = "block";
+                } else {
+                    section.style.display = "none";
+                }
+            }</script>
+</body>
+</html>
