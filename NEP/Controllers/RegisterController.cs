@@ -41,7 +41,7 @@ namespace NEP.Controllers
                 _context.SaveChanges(); // Save changes to the database
 
                 // Redirect to the login page after successful registration
-                return RedirectToAction("Login", "Account");
+                return RedirectToAction("Index", "Login");
             }
 
             // If the model state is invalid, redisplay the form with validation messages

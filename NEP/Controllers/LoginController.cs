@@ -20,22 +20,38 @@ namespace NEP.Controllers
         {
             return View();
         }
-
         [HttpPost]
-        public IActionResult Login(User model)
+        public IActionResult Login(string email, string password)
         {
-            if (ModelState.IsValid)
+            if (string.IsNullOrEmpty(email))
             {
-                // Dummy login validation for demonstration purposes
-                if (model.Email == "test@example.com" && model.Password == "password" && model.MemberType == "Member")
-                {
-                    // Redirect to home page on successful login
-                    return RedirectToAction("Index", "Home");
-                }
-                ModelState.AddModelError("", "Invalid login attempt.");
+                ModelState.AddModelError("Email", "Email is required.");
+            }
+            if (string.IsNullOrEmpty(password))
+            {
+                ModelState.AddModelError("Password", "Password is required.");
             }
 
-            return View(model);
+            if (ModelState.IsValid)
+            {
+                // Check if a user with the provided email and password exists
+                var user = _context.Users
+                    .FirstOrDefault(u => u.Email.ToLower() == email.ToLower() && u.Password == password);
+
+                if (user != null)
+                {
+                    // Redirect to the home page after successful login
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    // Add an error if the user was not found
+                    ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+                }
+            }
+
+            // If we got this far, something failed; redisplay the form
+            return View("Index");
         }
     }
 }
