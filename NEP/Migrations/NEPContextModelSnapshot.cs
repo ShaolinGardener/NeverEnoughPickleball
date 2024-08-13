@@ -201,7 +201,8 @@ namespace NEP.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CoachId");
+                    b.HasIndex("CoachId")
+                        .IsUnique();
 
                     b.ToTable("CoachSocialMedias");
                 });
@@ -929,6 +930,14 @@ namespace NEP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MemberType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
@@ -1003,8 +1012,8 @@ namespace NEP.Migrations
             modelBuilder.Entity("NEP.Models.CoachSocialMedia", b =>
                 {
                     b.HasOne("NEP.Models.Coach", "Coach")
-                        .WithMany()
-                        .HasForeignKey("CoachId")
+                        .WithOne("CoachSocialMedia")
+                        .HasForeignKey("NEP.Models.CoachSocialMedia", "CoachId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1120,6 +1129,12 @@ namespace NEP.Migrations
             modelBuilder.Entity("NEP.Models.CalendarNotification", b =>
                 {
                     b.Navigation("Attendees");
+                });
+
+            modelBuilder.Entity("NEP.Models.Coach", b =>
+                {
+                    b.Navigation("CoachSocialMedia")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("NEP.Models.Court", b =>

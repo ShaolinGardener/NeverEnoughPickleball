@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "jz+m46zOHKUnp+Mpexa9QAy3d4Ghd9y9X9YKgp0jGEI=",
+  "Hash": "+LKu8gNLzKLEn0zcio+dcwkOc1HvkatdreLxoVzU3QQ=",
   "Source": "NEP",
   "BasePath": "_content/NEP",
   "Mode": "Default",
@@ -53253,6 +53253,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\carousel-2.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\img\\down-arrow.png",
+      "SourceId": "NEP",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\",
+      "BasePath": "_content/NEP",
+      "RelativePath": "img/down-arrow.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\down-arrow.png"
     },
     {
       "Identity": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\img\\LoginPageImage.jpg",

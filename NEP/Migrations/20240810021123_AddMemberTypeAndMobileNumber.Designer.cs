@@ -12,8 +12,8 @@ using NEP.Data;
 namespace NEP.Migrations
 {
     [DbContext(typeof(NEPContext))]
-    [Migration("20240622153350_Coaches")]
-    partial class Coaches
+    [Migration("20240810021123_AddMemberTypeAndMobileNumber")]
+    partial class AddMemberTypeAndMobileNumber
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -157,6 +157,57 @@ namespace NEP.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Coaches");
+                });
+
+            modelBuilder.Entity("NEP.Models.CoachSocialMedia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("CoachId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Facebook")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Instagram")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LinkedIn")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Snapchat")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TikTok")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Twitter")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("WhatsApp")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YouTube")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CoachId")
+                        .IsUnique();
+
+                    b.ToTable("CoachSocialMedias");
                 });
 
             modelBuilder.Entity("NEP.Models.Court", b =>
@@ -882,6 +933,14 @@ namespace NEP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MemberType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MobileNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
@@ -951,6 +1010,17 @@ namespace NEP.Migrations
                     b.HasOne("NEP.Models.CalendarNotification", null)
                         .WithMany("Attendees")
                         .HasForeignKey("CalendarNotificationUID");
+                });
+
+            modelBuilder.Entity("NEP.Models.CoachSocialMedia", b =>
+                {
+                    b.HasOne("NEP.Models.Coach", "Coach")
+                        .WithOne("CoachSocialMedia")
+                        .HasForeignKey("NEP.Models.CoachSocialMedia", "CoachId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Coach");
                 });
 
             modelBuilder.Entity("NEP.Models.Court", b =>
@@ -1062,6 +1132,12 @@ namespace NEP.Migrations
             modelBuilder.Entity("NEP.Models.CalendarNotification", b =>
                 {
                     b.Navigation("Attendees");
+                });
+
+            modelBuilder.Entity("NEP.Models.Coach", b =>
+                {
+                    b.Navigation("CoachSocialMedia")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("NEP.Models.Court", b =>

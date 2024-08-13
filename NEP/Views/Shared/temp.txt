@@ -1,0 +1,726 @@
+
+
+/* Log In */
+
+position: relative;
+width: 1440px;
+height: 900px;
+
+background: #F9F9FA;
+
+
+/* UI / Interactions / Inputs / Default / Active Copy 2 */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 49.44%;
+bottom: 45.56%;
+
+
+
+/* Rectangle 17 */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 45px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0442991));
+border-radius: 5px;
+
+
+/* Placeholder */
+
+position: absolute;
+visibility: hidden;
+width: 161px;
+height: 28px;
+left: 16px;
+top: 9px;
+
+font-family: 'Gilroy-Bold';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* div/left-section */
+
+position: absolute;
+width: 470.89px;
+height: 900px;
+left: 0px;
+top: 0px;
+
+
+
+/* side-left */
+
+position: absolute;
+left: 0%;
+right: 0.19%;
+top: 0%;
+bottom: 0%;
+
+background: #D9D9D9;
+
+
+/* image 1 */
+
+position: absolute;
+left: 214.49%;
+right: -400.76%;
+top: 0%;
+bottom: 0%;
+
+background: url(image.png);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Already a Member? LOG IN NOW */
+
+position: absolute;
+left: 58.4%;
+right: 27.85%;
+top: 66%;
+bottom: 31.33%;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+text-align: center;
+
+color: #424242;
+
+
+
+/* heading */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 264px;
+height: 85px;
+left: 815px;
+top: 175px;
+
+
+
+/* BECOME AN EXCLUSIVE MEMBERS */
+
+width: 192px;
+height: 44px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 44px;
+/* identical to box height, or 176% */
+text-align: center;
+text-transform: capitalize;
+
+color: #FF7800;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SIGN UP and join the partnersh */
+
+width: 264px;
+height: 29px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 176% */
+text-align: center;
+text-transform: capitalize;
+
+color: #424242;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* UI / Interactions / Inputs / Default / Active */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 43.33%;
+bottom: 51.67%;
+
+
+
+/* Rectangle 17 */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 45px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0442991));
+border-radius: 5px;
+
+
+/* Placeholder */
+
+position: absolute;
+width: 161px;
+height: 28px;
+left: 16px;
+top: 9px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* Placeholder */
+
+position: absolute;
+width: 161px;
+height: 28px;
+left: 779px;
+top: 454px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* UI / Interactions / Inputs / Default / Active Copy */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 37.22%;
+bottom: 57.78%;
+
+
+
+/* Rectangle 17 */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 45px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0442991));
+border-radius: 5px;
+
+
+/* Placeholder */
+
+position: absolute;
+width: 161px;
+height: 28px;
+left: 16px;
+top: 9px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* UI / Interactions / Buttons / CTA / Big / Normal */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 56.67%;
+bottom: 37.22%;
+
+
+
+/* Rectangle 4 */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0%;
+bottom: 0%;
+
+background: #02565E;
+border: 2px solid #F2F4F6;
+box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.0442991);
+border-radius: 5px;
+
+
+/* Big CTA */
+
+position: absolute;
+height: 28px;
+left: 5.42%;
+right: 5%;
+top: calc(50% - 28px/2 - 0.5px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Icon/Outline/Chevron Down */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 1079px;
+top: 455px;
+
+
+
+/* Icon */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 37.5%;
+bottom: 33.33%;
+
+/* cool-gray/900 */
+border: 2px solid #111827;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Log In */
+
+position: relative;
+width: 1440px;
+height: 900px;
+
+background: #F9F9FA;
+
+
+/* UI / Interactions / Inputs / Default / Active Copy 2 */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 49.44%;
+bottom: 45.56%;
+
+
+
+/* Rectangle 17 */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 45px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0442991));
+border-radius: 5px;
+
+
+/* Placeholder */
+
+position: absolute;
+visibility: hidden;
+width: 161px;
+height: 28px;
+left: 16px;
+top: 9px;
+
+font-family: 'Gilroy-Bold';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* div/left-section */
+
+position: absolute;
+width: 470.89px;
+height: 900px;
+left: 0px;
+top: 0px;
+
+
+
+/* side-left */
+
+position: absolute;
+left: 0%;
+right: 0.19%;
+top: 0%;
+bottom: 0%;
+
+background: #D9D9D9;
+
+
+/* image 1 */
+
+position: absolute;
+left: 214.49%;
+right: -400.76%;
+top: 0%;
+bottom: 0%;
+
+background: url(image.png);
+transform: matrix(-1, 0, 0, 1, 0, 0);
+
+
+/* Already a Member? LOG IN NOW */
+
+position: absolute;
+left: 58.4%;
+right: 27.85%;
+top: 66%;
+bottom: 31.33%;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+text-align: center;
+
+color: #424242;
+
+
+
+/* heading */
+
+/* Auto layout */
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 0px;
+gap: 12px;
+
+position: absolute;
+width: 264px;
+height: 85px;
+left: 815px;
+top: 175px;
+
+
+
+/* BECOME AN EXCLUSIVE MEMBERS */
+
+width: 192px;
+height: 44px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 44px;
+/* identical to box height, or 176% */
+text-align: center;
+text-transform: capitalize;
+
+color: #FF7800;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* SIGN UP and join the partnersh */
+
+width: 264px;
+height: 29px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 176% */
+text-align: center;
+text-transform: capitalize;
+
+color: #424242;
+
+
+/* Inside auto layout */
+flex: none;
+order: 1;
+flex-grow: 0;
+
+
+/* UI / Interactions / Inputs / Default / Active */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 43.33%;
+bottom: 51.67%;
+
+
+
+/* Rectangle 17 */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 45px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0442991));
+border-radius: 5px;
+
+
+/* Placeholder */
+
+position: absolute;
+width: 161px;
+height: 28px;
+left: 16px;
+top: 9px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* Placeholder */
+
+position: absolute;
+width: 161px;
+height: 28px;
+left: 779px;
+top: 454px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* UI / Interactions / Inputs / Default / Active Copy */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 37.22%;
+bottom: 57.78%;
+
+
+
+/* Rectangle 17 */
+
+box-sizing: border-box;
+
+position: absolute;
+height: 45px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+border: 1px solid #000000;
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0442991));
+border-radius: 5px;
+
+
+/* Placeholder */
+
+position: absolute;
+width: 161px;
+height: 28px;
+left: 16px;
+top: 9px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 28px;
+/* identical to box height, or 200% */
+
+color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* UI / Interactions / Buttons / CTA / Big / Normal */
+
+position: absolute;
+left: 52.99%;
+right: 22.71%;
+top: 56.67%;
+bottom: 37.22%;
+
+
+
+/* Rectangle 4 */
+
+box-sizing: border-box;
+
+position: absolute;
+left: 0px;
+right: 0px;
+top: 0%;
+bottom: 0%;
+
+background: #02565E;
+border: 2px solid #F2F4F6;
+box-shadow: 0px 4px 13px rgba(0, 0, 0, 0.0442991);
+border-radius: 5px;
+
+
+/* Big CTA */
+
+position: absolute;
+height: 28px;
+left: 5.42%;
+right: 5%;
+top: calc(50% - 28px/2 - 0.5px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 28px;
+/* identical to box height, or 175% */
+text-align: center;
+
+color: #FFFFFF;
+
+
+
+/* Icon/Outline/Chevron Down */
+
+position: absolute;
+width: 24px;
+height: 24px;
+left: 1079px;
+top: 455px;
+
+
+
+/* Icon */
+
+position: absolute;
+left: 20.83%;
+right: 20.83%;
+top: 37.5%;
+bottom: 33.33%;
+
+/* cool-gray/900 */
+border: 2px solid #111827;

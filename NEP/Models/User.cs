@@ -14,23 +14,36 @@ namespace NEP.Models
     {
         public Guid Id { get; set; }
 
-        [Required]
-        public string FirstName { get; set; } = string.Empty;
-        [Required]
-        public string LastName { get; set; } = string.Empty;
-        [Required]
-        public string ZipCode { get; set; } = string.Empty;
-        public string Email { get; set; } = string.Empty;
         public string? UserName { get; set; }
-        public string? Password { get; set; }
 
-        public string MemberType { get; set; }
-        
-        [Phone]
-        public string MobileNumber { get; set; }
         public bool IsActive { get; set; }
-        [Required]
+
+        [Required(ErrorMessage = "Mobile Number is required")]
+        [Phone(ErrorMessage = "Invalid Mobile Number")]
         public string Phone { get; set; } = string.Empty;
+
+
+        [Required(ErrorMessage = "First Name is required")]
+        public string FirstName { get; set; }
+
+        [Required(ErrorMessage = "Last Name is required")]
+        public string LastName { get; set; }
+
+
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid Email Address")]
+        public string Email { get; set; }
+
+        [Required(ErrorMessage = "Password is required")]
+        [DataType(DataType.Password)]
+        [MinLength(6, ErrorMessage = "Password must be at least 6 characters long")]
+        public string Password { get; set; }
+
+        [Required(ErrorMessage = "Zipcode is required")]
+        public string ZipCode { get; set; }
+
+        [Required(ErrorMessage = "Member Type is required")]
+        public string MemberType { get; set; }
         public DateTime DateCreated { get; set; }
 
         [ForeignKey("User")]
