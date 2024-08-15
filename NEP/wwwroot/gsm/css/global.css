@@ -16547,7 +16547,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	position: static
 }
 .header-plain.layout-boxed #Top_bar .container {
-	max-width: 100%
+	max-width: 50%
 }
 .header-plain #Top_bar .one.column {
 	width: 100%;

@@ -1,0 +1,275 @@
+/* Group 77 */
+
+position: absolute;
+width: 1440px;
+height: 100px;
+left: calc(50% - 1440px/2);
+top: 0px;
+
+
+
+/* Rectangle */
+
+box-sizing: border-box;
+
+position: absolute;
+width: 1440px;
+left: calc(50% - 1440px/2);
+top: 0%;
+bottom: 98%;
+
+background: #FFFFFF;
+border: 1px solid #F2F4F6;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0442991);
+border-radius: 5px;
+
+
+/* Group 76 */
+
+position: absolute;
+width: 1380px;
+height: 84.65px;
+left: 30px;
+top: 8px;
+
+
+
+
+/* PICKLEBALL */
+
+position: absolute;
+left: 2.65%;
+right: 92.49%;
+top: 1.13%;
+bottom: 98.55%;
+
+font-family: 'Gilroy-Heavy';
+font-style: normal;
+font-weight: 400;
+font-size: 12.6959px;
+line-height: 16px;
+
+color: #FFFFFF;
+
+
+
+
+/* Pricing */
+
+position: absolute;
+height: 28px;
+left: 14.79%;
+right: 81.32%;
+top: calc(50% - 28px/2 - 2457px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+color: #02565E;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* Contact */
+
+position: absolute;
+height: 28px;
+left: 22.01%;
+right: 72.85%;
+top: calc(50% - 28px/2 - 2457px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+color: #02565E;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* FAQ */
+
+position: absolute;
+height: 28px;
+left: 30.49%;
+right: 65.49%;
+top: calc(50% - 28px/2 - 2457px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+color: #02565E;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* FAQ */
+
+position: absolute;
+height: 28px;
+left: 37.85%;
+right: 54.17%;
+top: calc(50% - 28px/2 - 2456px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+color: #02565E;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* FAQ */
+
+position: absolute;
+height: 28px;
+left: 49.1%;
+right: 46.67%;
+top: calc(50% - 28px/2 - 2457px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+color: #02565E;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* FAQ */
+
+position: absolute;
+height: 28px;
+left: 56.6%;
+right: 36.18%;
+top: calc(50% - 28px/2 - 2458px);
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+
+color: #02565E;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+
+/* Frame 123 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 15px;
+gap: 10px;
+
+position: absolute;
+width: 184px;
+height: 45px;
+left: 1226px;
+top: 28px;
+
+background: #02565E;
+border: 1px solid #F2F4F6;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0442991);
+border-radius: 5px;
+
+
+/* Normal CTA */
+
+width: 154px;
+height: 24px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+/* identical to box height */
+text-align: center;
+
+color: #FFFFFF;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+/* Frame 122 */
+
+box-sizing: border-box;
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 8px 15px;
+gap: 10px;
+
+position: absolute;
+width: 184px;
+height: 45px;
+left: 1033px;
+top: 28px;
+
+border: 1px solid #02565E;
+filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.0442991));
+border-radius: 5px;
+
+
+/* Normal CTA */
+
+width: 154px;
+height: 28px;
+
+font-family: 'Gilroy-Bold';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 28px;
+/* identical to box height, or 156% */
+text-align: center;
+
+color: #02565E;
+
+mix-blend-mode: normal;
+opacity: 0.8;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;

@@ -29,13 +29,15 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,300,400,400italic,500,700,700italic'>
 
     <!-- CSS -->
+  
     <link rel='stylesheet' href='/gsm/css/global.css'>
     <link rel='stylesheet' href='/gsm/content/gsmservice/css/structure.css'>
     <link rel='stylesheet' href='/gsm/content/gsmservice/css/gsmservice.css'>
-    <link rel='stylesheet' href='/gsm/content/gsmservice/css/custom.css'>
+    <link rel='stylesheet' href='/gsm/content/gsmservice/css/custom.css' />
 
     <!-- Revolution Slider -->
     <link rel="stylesheet" href="/gsm/plugins/rs-plugin-5.3.1/css/settings.css">
+
 
 
     @*<meta name="viewport" content="width=device-width, initial-scale=1.0" />*@
@@ -43,7 +45,9 @@
    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/NEP.styles.css" asp-append-version="true" />*@
+    @RenderSection("Styles", required: false)
 </head>
+
 <!--<body>
      Start: HEADER -->
     @* <header>
