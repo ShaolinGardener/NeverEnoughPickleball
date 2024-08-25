@@ -535,9 +535,9 @@ C:/Users/zoso2/Downloads/NEP/NEP/NEP/obj/Debug/net7.0/NEP.csproj.Up2Date
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/scopedcss/Views/Shared/_Public.cshtml.rz.scp.css
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/scopedcss/bundle/NEP.styles.css
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/scopedcss/projectbundle/NEP.bundle.scp.css
-/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/NEP.csproj.CopyComplete
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/NEP.dll
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/refint/NEP.dll
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/NEP.pdb
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/NEP.genruntimeconfig.cache
 /Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/ref/NEP.dll
+/Users/vishwanath/Documents/NeverEnoughPickleball/NEP/obj/Debug/net7.0/NEP.csproj.CopyComplete

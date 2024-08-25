@@ -1,0 +1,323 @@
+﻿@model NEP.Models.Member
+
+@{
+    ViewData["Title"] = "Create Member";
+}
+<html lang=" en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"]</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/css/become-a-member.css" />
+
+</head>
+<body>
+    <div class="container">
+        <form asp-action="create" method="post" enctype="multipart/form-data">
+            <div class="Rectangle container-fluid px-4 py-3 d-flex justify-content-between align-items-center">
+                <span class="Vector"></span>
+                <nav class="d-flex">
+                    <span class="home mx-2">Home</span>
+                    <span class="pricing mx-2">About</span>
+                    <span class="faq mx-2">Mission</span>
+                    <span class="faq mx-2">Program</span>
+                    <span class="contact mx-2">Contact</span>
+                </nav>
+                <div>
+                    <a href="#" class="btn Big-CTA mx-2">Login</a>
+                    <a href="#" class="btn Big-CTA">Sign Up</a>
+                </div>
+            </div>
+            <div class="Membership-form container-fluid py-4">
+                <!-- Rectangle-29 Box -->
+                <div class="Rectangle-29">
+                    Become a Member
+                </div>
+
+                <!-- Line-1 Divider -->
+                <div class="Line-1 bg-warning"></div>
+
+                <!-- Additional Information -->
+                <span class="Additional-info">
+                    Want to stay informed of upcoming events, make use of our court scheduling and CourtChattr app, find ways to volunteer, be the first to know of new merchandise, and/or receive our newsletter of the latest progress in the pickleball community?
+                </span>
+
+                <!--Personal Contact Section-->>
+
+                <div class="Rectangle-30" onclick="toggleSection('personalContact')">
+                    <span>Personal Contact</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+                </div>
+                <div id="personalContact" class="panel-body">
+                    <div class="row">
+                        <div class="Rectangle-17">
+                            <input asp-for="FirstName" class="form-control" placeholder="First Name">
+                            <span asp-validation-for="FirstName" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="LastName" class="form-control" placeholder="Last Name">
+                            <span asp-validation-for="LastName" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="ScreenName" class="form-control" placeholder="Screen Name">
+                            <span asp-validation-for="ScreenName" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="CompanyOrOrganization" class="form-control" placeholder="Company or Organization">
+                            <span asp-validation-for="CompanyOrOrganization" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="DateOfBirth" class="form-control" type="date">
+                            <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="Street" class="form-control" placeholder="Street (Private)">
+                            <span asp-validation-for="Street" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="AptSuiteNumber" class="form-control" placeholder="Apt, Suite Number">
+                            <span asp-validation-for="AptSuiteNumber" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="City" class="form-control" placeholder="City">
+                            <span asp-validation-for="City" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="State" class="form-control" placeholder="State">
+                            <span asp-validation-for="State" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="Zip" class="form-control" placeholder="ZIP">
+                            <span asp-validation-for="Zip" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="Phone" class="form-control" type="tel" placeholder="Phone">
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="Email" class="form-control" type="email" placeholder="email">
+                            <span asp-validation-for="Email" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-sm text-gray-600">
+                        Information above used for contact by Never Enough Pickleball websites and CourtChattr apps, for updates, new features, news only provided to coaches. Name, number, URL, phone made public where opt.
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+
+                <!--Play Info-->
+
+                <div class="Rectangle-30" onclick="toggleSection('playInfo')">
+                    <span>Play Info</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+                </div>
+
+                <div id="playInfo" class="panel-body" style="display: none;">
+                    <div class="radio-buttons">
+                        <label>
+                            <input asp-for="PlayType" type="radio" value="Fun" />
+                            Fun
+                        </label>
+                        <label>
+                            <input asp-for="PlayType" type="radio" value="Exercise" />
+                            Exercise
+                        </label>
+                        <label>
+                            <input asp-for="PlayType" type="radio" value="League" />
+                            League
+                        </label>
+                        <label>
+                            <input asp-for="PlayType" type="radio" value="Competition" />
+                            Competition
+                        </label>
+                    </div>
+
+                    <div class="row">
+                        <div class="Rectangle-17">
+                            <input asp-for="UnofficialRating" class="form-control" placeholder="Unofficial Self Rating" />
+                            <span asp-validation-for="UnofficialRating" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="DuprRating" class="form-control" placeholder="Dupr Rating" />
+                            <span asp-validation-for="DuprRating" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="UtprRating" class="form-control" placeholder="Utpr Rating" />
+                            <span asp-validation-for="UtprRating" class="text-danger"></span>
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="PaddleUsed" class="form-control" placeholder="Paddle Used" />
+                            <span asp-validation-for="PaddleUsed" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Personal Bio -->
+                <div class="Rectangle-30" onclick="toggleSection('personalBio')">
+                    <span>Personal Bio</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+                </div>
+                <div id="personalBio" class="panel-body" style="display: none;">
+                    <div class="Rectangle-17">
+                        <textarea asp-for="PersonalBio" class="form-control" placeholder="Personal Bio"></textarea>
+                        <span asp-validation-for="PersonalBio" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- NEP Volunteer Opportunities -->
+                <div class="Rectangle-30" onclick="toggleSection('nepVolunteerOpportunities')">
+                    <span>NEP Volunteer Opportunities</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+                </div>
+
+                <div id="nepVolunteerOpportunities" class="panel-body" style="display: none;">
+                    <span class="Quickly-build-beauti">
+                        What volunteering interests do you have with Never Enough Pickleball, if any?
+                    </span>
+                    <p class="subscribe-member">
+                        You can subscribe/unsubscribe at any time in your member settings
+                    </p>
+                    <div class="radio-buttons-container">
+                        <div class="radio-button-group">
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Local Court Ambassador">
+                                Local Court Ambassador
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Local Event Staff">
+                                Local Event Staff
+                            </label>
+                        </div>
+                        <div class="radio-button-group">
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Stay Contributor">
+                                Stay Contributor
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Coaching">
+                                Coaching
+                            </label>
+                        </div>
+                        <div class="radio-button-group">
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="School Liason">
+                                School Liason
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Photo Contributor">
+                                Photo Contributor
+                            </label>
+                        </div>
+                    </div>
+                    <span class="Quickly-build-beauti">
+                        What information would interest you through Never Enough Pickleball?
+                    </span>
+                    <p class="subscribe-member">
+                        You can subscribe/unsubscribe at any time in your member settings
+                    </p>
+                    <div class="radio-buttons-container">
+                        <div class="radio-button-group">
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Upcoming Event/Tournament">
+                                Upcoming Event/Tournament
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Pickleball Socials">
+                                Pickleball Socials
+                            </label>
+                        </div>
+                        <div class="radio-button-group">
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Product Deals/Discounts">
+                                Product Deals/Discounts
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Volunteering Opportunities">
+                                Volunteering Opportunities
+                            </label>
+                        </div>
+                        <div class="radio-button-group">
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="Pickleball Learning">
+                                Pickleball Learning
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" asp-for="VolunteerInterest" value="NEP Newsletter">
+                                NEP Newsletter
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Played Courts/Facilities Section -->
+                <div class="Rectangle-30" onclick="toggleSection('PlayedCourtsFacilities')">
+                    <span>Played Courts/Facilities</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+                </div>
+                <div id="PlayedCourtsFacilities" class="panel-body" style="display: none;">
+                    <div class="row">
+                        <div class="Rectangle-17">
+                            <input asp-for="PlayedState" class="form-control" placeholder="State" />
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="PlayedCity" class="form-control" placeholder="City" />
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="PlayedParkFacility" class="form-control" placeholder="Park/Facility" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Available Courts/Facilities Section -->
+                <div class="Rectangle-30" onclick="toggleSection('availableCourts')">
+                    <span>Available Courts/Facilities (if not listed above)</span>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/Down_arrow.svg" alt="Icon" class="IconOutlineChevron-Down">
+                </div>
+                <div id="availableCourts" class="panel-body" style="display: none;">
+                    <div class="row">
+                        <div class="Rectangle-17">
+                            <input asp-for="AvailableFacilitiesName" class="form-control" placeholder="Facilities Name" />
+                        </div>
+                        <div class="Rectangle-17">
+                            <input asp-for="AvailableFacilitiesContactEmail" class="form-control" placeholder="Facilities Contact Email to join NEP Member" />
+                        </div>
+                        <div class="Rectangle-17-Large">
+                            <textarea asp-for="HowDidYouHearAboutNEP" class="form-control" placeholder="How Did you hear about Never Enough PickleBall?*"></textarea>
+                        </div>
+                        <div class="Rectangle-17-Large">
+                            <textarea asp-for="SuggestionsForNEP" class="form-control" placeholder="Suggestions for Never Enough PickleBall?"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+</form>
+    </div>
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+
+    <!-- Include Bootstrap JS and dependencies -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>function toggleSection(sectionId) {
+            var section = document.getElementById(sectionId);
+            if (section.style.display === "none") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            }
+        }</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+﻿@model NEP.Models.Member
+
+@{
+    ViewData["Title"] = "Member Details";
+}
+
+@if (Model == null)
+{
+    <div class="alert alert-danger">Member data is not available.</div>
+}
+else
+{
+    <h1>Member Details</h1>
+
+    <div>
+        <h4>Member</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FirstName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.FirstName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.LastName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.ScreenName)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.ScreenName)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.CompanyOrOrganization)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.CompanyOrOrganization)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </dt>
+            <dd class="col-sm-10">
+                @Model.DateOfBirth.ToShortDateString()
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Phone)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Phone)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Email)
+            </dd>
+        </dl>
+    </div>
+
+    <div>
+        <a href="@Url.Action("Edit", new { id = Model.Id })" class="btn Big-CTA">Edit</a> |
+        <a href="@Url.Action("Index")" class="btn Big-CTA">Back to List</a>
+    </div>
+}

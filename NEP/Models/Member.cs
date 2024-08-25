@@ -1,70 +1,59 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace NEP.Models
 {
     public class Member
     {
-        [Key]
         public int Id { get; set; }
 
         [Required]
-        [Display(Name = "First Name")]
         public string FirstName { get; set; }
 
         [Required]
-        [Display(Name = "Last Name")]
         public string LastName { get; set; }
 
-        [Required]
-        [EmailAddress]
-        public string Email { get; set; }
+        public string ScreenName { get; set; }
 
-        [Required]
+        public string CompanyOrOrganization { get; set; }
+
+        public DateTime DateOfBirth { get; set; }
+
+        public string Street { get; set; }
+
+        public string AptSuiteNumber { get; set; }
+
+        public string City { get; set; }
+
+        public string State { get; set; }
+
+        public string Zip { get; set; }
+
         [Phone]
         public string Phone { get; set; }
 
-        [Required]
-        [Display(Name = "Date of Birth")]
-        [DataType(DataType.Date)]
-        public DateTime DateOfBirth { get; set; }
+        [EmailAddress]
+        public string Email { get; set; }
 
-        [Required]
-        public string Address { get; set; }
+        public string PlayType { get; set; }
+        public string UnofficialRating { get; set; }
+        public string DuprRating { get; set; }
+        public string UtprRating { get; set; }
+        public string PaddleUsed { get; set; }
 
-        [Required]
-        public string City { get; set; }
+       
+        public string PersonalBio { get; set; }
 
-        [Required]
-        public string State { get; set; }
+        
+        public string VolunteerInterest { get; set; }
+        public string PlayedState { get; set; }
+        public string PlayedCity { get; set; }
+        public string PlayedParkFacility { get; set; }
 
-        [Required]
-        [Display(Name = "Zip Code")]
-        public string ZipCode { get; set; }
-
-        [Required]
-        public string Gender { get; set; }
-
-        [Required]
-        public string Occupation { get; set; }
-
-        [Required]
-        [Display(Name = "Occupation Details")]
-        public string OccupationDetails { get; set; }
-
-        [Required]
-        public string Languages { get; set; }
-
-        [Required]
-        [Display(Name = "Parent/Guardian")]
-        public string ParentGuardian { get; set; }
-
-        [Required]
-        public string Relationship { get; set; }
-
-        [Required]
-        [Display(Name = "How Did You Hear About Us?")]
-        public string HearAboutUs { get; set; }
+        public string AvailableFacilitiesName { get; set; }
+        public string AvailableFacilitiesContactEmail { get; set; }
+        public string HowDidYouHearAboutNEP { get; set; }
+        public string SuggestionsForNEP { get; set; }
     }
+
 }

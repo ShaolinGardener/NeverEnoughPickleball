@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NEP.Data;
 
@@ -11,9 +12,11 @@ using NEP.Data;
 namespace NEP.Migrations
 {
     [DbContext(typeof(NEPContext))]
-    partial class NEPContextModelSnapshot : ModelSnapshot
+    [Migration("20240808234626_becomememberinitial")]
+    partial class becomememberinitial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -718,11 +721,11 @@ namespace NEP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("AvailableFacilitiesContactEmail")
+                    b.Property<string>("AvailableFacilityContactEmail")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("AvailableFacilitiesName")
+                    b.Property<string>("AvailableFacilityName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -749,11 +752,19 @@ namespace NEP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("HowDidYouHearAboutNEP")
+                    b.Property<string>("HearAboutNEP")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("InfoInterest")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NEPSuggestions")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -763,8 +774,7 @@ namespace NEP.Migrations
 
                     b.Property<string>("PersonalBio")
                         .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
                         .IsRequired()
@@ -786,6 +796,10 @@ namespace NEP.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ProfilePic")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ScreenName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -795,10 +809,6 @@ namespace NEP.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Street")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SuggestionsForNEP")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
