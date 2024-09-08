@@ -1,1 +1,423 @@
-﻿
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F9F9FA;
+            color: #333;
+        }
+
+        .header {
+            background-image: url('header-image.jpg'); /* Background image from the header section */
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+            .header h1 {
+                font-size: 48px;
+                margin: 0;
+                line-height: 1.2;
+            }
+
+            .header p {
+                font-size: 18px;
+                margin: 20px 0;
+            }
+
+        .donate-button {
+            background-color: #00695c;
+            color: #FFF;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+            .section h2 {
+                color: #FF7800;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+        .what-we-do {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+            .what-we-do .content {
+                width: 60%;
+                text-align: left;
+            }
+
+            .what-we-do h3 {
+                color: #FF7800;
+                font-size: 24px;
+                margin: 20px 0 10px;
+            }
+
+            .what-we-do p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .what-we-do .image {
+                width: 35%;
+            }
+
+            .what-we-do img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+        .donate-button {
+            background-color: #00695c;
+            color: #FFF;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .section {
+            padding: 50px;
+            text-align: center;
+        }
+
+            .section h2 {
+                color: #FF7800;
+                font-size: 36px;
+                margin-bottom: 20px;
+            }
+
+        .what-we-do {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 40px;
+        }
+
+            .what-we-do .content {
+                width: 60%;
+                text-align: left;
+            }
+
+            .what-we-do h3 {
+                color: #FF7800;
+                font-size: 24px;
+                margin: 20px 0 10px;
+            }
+
+            .what-we-do p {
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .what-we-do .image {
+                width: 35%;
+            }
+
+            .what-we-do img {
+                width: 100%;
+                border-radius: 10px;
+            }
+
+        /* Fundraising Programs Section */
+        .fundraising-programs {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+
+            .fundraising-programs .program {
+                width: 30%;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+                .fundraising-programs .program img {
+                    width: 50px;
+                    margin-bottom: 10px;
+                }
+
+                .fundraising-programs .program h4 {
+                    color: #FF7800;
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+
+        .commitment {
+            background-color: #00695c;
+            color: white;
+            padding: 50px 20px;
+        }
+
+            .commitment h2 {
+                font-size: 28px;
+                margin-bottom: 20px;
+            }
+
+            .commitment ul {
+                text-align: left;
+                margin: 0 auto;
+                width: 80%;
+                list-style-type: none;
+                padding: 0;
+            }
+
+                .commitment ul li {
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                    line-height: 1.6;
+                }
+
+            .commitment img {
+                width: 200px;
+                border-radius: 10px;
+                margin-top: 20px;
+            }
+
+        .join-community {
+            padding: 50px;
+            text-align: center;
+        }
+
+            .join-community input {
+                padding: 10px;
+                margin-right: 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .join-community button {
+                padding: 10px 20px;
+                background-color: #00695c;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+        .contact-form {
+            padding: 50px;
+            background-color: #F9F9FA;
+            text-align: center;
+        }
+
+            .contact-form input, .contact-form textarea {
+                width: 80%;
+                padding: 10px;
+                margin: 10px 0;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+            }
+
+            .contact-form button {
+                padding: 10px 30px;
+                background-color: #00695c;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+        .mcb-section-s2nxtjydm {
+            padding-top: 110px;
+            padding-bottom: 70px;
+            background-color:black;
+            background-image: url("/img/about-1-ver2.png");
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="mfn-main-slider mfn-rev-slider">
+        <rs-module-wrap id="rev_slider_1_1_wrapper" data-source="gallery" style="visibility: visible; background: transparent; padding: 0px; margin: 0px auto; height: 800px; display: block; width: auto; overflow: visible; transform: translate(0px, 0px); top: 0px;">
+            <rs-module id="rev_slider_1_1" style="height: 800px; left: 0px; width: 1519px;" data-version="6.7.11" data-idcheck="true" class="revslider-initialised rev_redraw_on_blurfocus" data-slideactive="rs-1">
+                <rs-loader class="spinner8 " style="display: none;"><div class="rs-spinner-inner"><span style="background:#ffffff"></span> <span style="background:#ffffff"></span> <span style="background:#ffffff"></span> <span style="background:#ffffff"></span></div></rs-loader><rs-progress style="visibility:hidden;"><rs-progress-bar style="background: rgba(255, 255, 255, 0.5);"></rs-progress-bar></rs-progress><rs-slides style="overflow: hidden; position: absolute; visibility: visible; max-height: none; height: 100%; width: 100%;">
+                    <rs-slide style="position: absolute; display: block; overflow: hidden; height: 100%; width: 100%; z-index: 20; opacity: 1; visibility: inherit;" data-key="rs-1" data-title="Slide" data-anim="ms:1000;r:0;" data-in="o:0;" data-out="a:false;" data-originalindex="1" data-origindex="0" data-description="" data-sba="" data-scroll-based="false" data-owidth="1920" data-oheight="800" data-rspausetimeronce="0" data-isactiveslide="true">
+
+                        <!--
+                                                    -->
+                        <rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 520.6px; top: 352px; z-index: 12; visibility: visible; perspective: 601px;">
+                            <rs-layer id="slider-1-slide-1-layer-0" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:c;" data-text="w:normal;s:38;l:48;a:center;" data-dim="w:1000px;" data-frame_0="sX:0.8;sY:0.8;" data-frame_1="e:power4.out;st:300;sp:900;sR:300;" data-frame_999="o:0;st:w;sR:7800;" style="z-index: 12; font-family: Poppins; height: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: normal; width: 1000px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: center; line-height: 48px; letter-spacing: 0px; font-weight: 400; font-size: 38px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">
+                                Improve Youth Health
+                            </rs-layer>
+                        </rs-layer-wrap>
+                        <!--
+
+                        -->
+                        <rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 415.6px; top: 250px; z-index: 11; visibility: visible; perspective: 601px;">
+                            <rs-layer id="slider-1-slide-1-layer-1" data-type="text" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:c;yo:-120px;" data-text="w:normal;s:60;l:60;fw:500;" data-frame_0="sX:0.8;sY:0.8;" data-frame_1="e:power4.out;st:250;sp:1000;sR:250;" data-frame_999="o:0;st:w;sR:7750;" style="z-index: 11; font-family: Poppins; height: auto; width: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 60px; letter-spacing: 0px; font-weight: 500; font-size: 60px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" class="rs-layer" data-idcheck="true" data-stylerecorder="true" data-initialised="true">
+                                Your Donation Helps
+                            </rs-layer>
+                        </rs-layer-wrap>
+                        
+                        <rs-layer-wrap class="rs-parallax-wrap" style="position: absolute; display: block; pointer-events: auto; left: 664.6px; top: 492px; z-index: 13; visibility: visible; perspective: 601px;">
+                            <rs-layer id="slider-1-slide-1-layer-3" class="rev-btn rs-layer rs-waction rs-wclickaction" data-type="button" data-color="#ffffff" data-rsp_ch="on" data-xy="x:c;y:c;yo:120px;" data-text="w:normal;s:16;l:55;fw:600;" data-dim="minh:0px;" data-actions="o:click;a:scrollbelow;sp:1000ms;e:power1.inOut;" data-padding="r:40;l:40;" data-border="bor:8px,8px,8px,8px;" data-frame_0="sX:0.8;sY:0.8;" data-frame_1="e:power4.out;st:350;sp:1000;sR:350;" data-frame_999="o:0;st:w;sR:7650;" data-frame_hover="bgc:#1999ff;bor:8px,8px,8px,8px;sp:200;e:power1.inOut;" style="z-index: 13; background-color: rgb(0, 137, 247); font-family: Poppins; height: auto; width: auto; color: rgb(255, 255, 255); text-decoration: none; white-space: nowrap; min-height: 0px; min-width: 0px; max-height: none; max-width: none; text-align: left; line-height: 55px; letter-spacing: 0px; font-weight: 600; font-size: 16px; padding-left: 40px; border-radius: 8px; padding-right: 40px; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" data-idcheck="true" data-stylerecorder="true" data-initialised="true">
+                                Discover now
+                            </rs-layer>
+                        </rs-layer-wrap>
+                        <rs-layer-wrap class="rs-parallax-wrap tp-parallax-container" style=" display: block; pointer-events: auto; transform: translate(0px, 135.7px); left: 152.6px; top: 43px; z-index: 10; visibility: visible; perspective: 601px;" data-parallaxlevel="25">
+                            <rs-layer id="slider-1-slide-1-layer-6" class="rs-pxl-5 rs-layer" data-type="image" data-rsp_ch="on" data-xy="x:c;xo:-10px;y:c;yo:-20px;" data-text="w:normal;" data-dim="w:1194px;h:673px;" data-frame_0="sX:0.8;sY:0.8;" data-frame_1="e:power4.inOut;st:150;sp:1000;sR:150;" data-frame_999="o:0;st:w;sR:7850;" style="z-index: 10; color: rgb(255, 255, 255); width: 1194px; height: 673px; min-height: 0px; min-width: 0px; max-height: none; max-width: none; backdrop-filter: none; filter: none; transform-origin: 50% 50%; opacity: 1; transform: translate(0px, 0px); visibility: visible;" data-idcheck="true" data-stylerecorder="true" data-initialised="true">
+                                <img src="/img/about-1-ver2.png" alt="" class="tp-rs-img rs-lazyload" width="1194" height="673" data-lazyload="//themes.muffingroup.com/betheme/wp-content/uploads/revslider/theme/betheme-slider-bg41.png" data-no-retina="" data-src-rs-ref="//themes.muffingroup.com/betheme/wp-content/uploads/revslider/theme/betheme-slider-bg41.png" style="position: relative; height: 100%; width: 100%;">
+                            </rs-layer>
+                        </rs-layer-wrap>
+                        
+                    </rs-slide>
+                </rs-slides>
+            </rs-module>
+        </rs-module-wrap>
+    </div>
+    
+    <section class="section mcb-section-s2nxtjydm" id="features" style="">
+        <div class="mcb-background-overlay"></div>
+            <div class="section_wrapper mfn-wrapper-for-wraps mcb-section-inner mcb-section-inner-s2nxtjydm">
+            <div class="wrap mcb-wrap mcb-wrap-agfgnm5ae one tablet-one laptop-one mobile-one clearfix" data-desktop-col="one" data-laptop-col="laptop-one" data-tablet-col="tablet-one" data-mobile-col="mobile-one" style="">
+                <div class="mcb-wrap-inner mcb-wrap-inner-agfgnm5ae mfn-module-wrapper mfn-wrapper-for-wraps">
+                    <div class="mcb-wrap-background-overlay"></div>
+                    <div class="column mcb-column mcb-item-6379f4lj one laptop-one tablet-one mobile-one column_heading" style="">
+                        <div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-6379f4lj mcb-item-heading-inner">
+                            <p class="title">THAT'S NOT ALL ...</p>
+                        </div>
+                    </div>
+                    <div class="column mcb-column mcb-item-yfskaydi one laptop-one tablet-one mobile-one column_heading" style="">
+                        <div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-yfskaydi mcb-item-heading-inner">
+                            <h2 class="title">Learn more about BeTheme</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="wrap mcb-wrap mcb-wrap-4f5bskug one tablet-one laptop-one mobile-one clearfix" data-desktop-col="one" data-laptop-col="laptop-one" data-tablet-col="tablet-one" data-mobile-col="mobile-one" style="">
+                <div class="mcb-wrap-inner mcb-wrap-inner-4f5bskug mfn-module-wrapper mfn-wrapper-for-wraps">'
+                    <div class="mcb-wrap-background-overlay"></div>
+                    <div class="column mcb-column mcb-item-oif8igzh9 one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style="">
+                        <div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-oif8igzh9 mcb-item-icon_box_2-inner">
+                            <a href="https://muffingroup.com/betheme/prebuilt-websites/" target="_blank" title="">
+                            <div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center">
+                                <div class="icon-wrapper">
+                                    <i class="icon-docs" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="desc-wrapper">
+                                        <div class="desc">Pre-built websites</div></div></div></a></div></div><div class="column mcb-column mcb-item-vo0vil0if one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-vo0vil0if mcb-item-icon_box_2-inner"><a href="https://youtu.be/MkeTBSMQEIE" rel="lightbox" title="" data-lightbox-type="iframe"><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-cog" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">BeBuilder</div></div></div></a></div></div><div class="column mcb-column mcb-item-9duu007qr one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-9duu007qr mcb-item-icon_box_2-inner"><a href="https://muffingroup.com/betheme/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-layout" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">The grid</div></div></div></a></div></div><div class="column mcb-column mcb-item-merbafxw one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-merbafxw mcb-item-icon_box_2-inner"><a href="https://muffingroup.com/betheme/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-doc-landscape" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">Header styles</div></div></div></a></div></div><div class="column mcb-column mcb-item-vmf96e5b3 one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-vmf96e5b3 mcb-item-icon_box_2-inner"><a href="https://muffingroup.com/betheme/features/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-lightbulb-line" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">Core features</div></div></div></a></div></div><div class="column mcb-column mcb-item-dzovab8jb one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-dzovab8jb mcb-item-icon_box_2-inner"><a href="https://muffingroup.com/betheme/elements/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-code" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">Elements &amp; shortcodes</div></div></div></a></div></div><div class="column mcb-column mcb-item-qj8kqh7tf one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-qj8kqh7tf mcb-item-icon_box_2-inner"><a href="https://muffingroup.com/betheme/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-picture" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">Blog &amp; portfolio</div></div></div></a></div></div><div class="column mcb-column mcb-item-h6m8mik4 one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-h6m8mik4 mcb-item-icon_box_2-inner"><a href="https://muffingroup.com/betheme/woo-builder/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-cart" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">E-commerce</div></div></div></a></div></div><div class="column mcb-column mcb-item-cj7y0cao one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-cj7y0cao mcb-item-icon_box_2-inner"><a href="https://support.muffingroup.com/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-help" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">Tutorials and support</div></div></div></a></div></div><div class="column mcb-column mcb-item-9ig2rdrrn one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-9ig2rdrrn mcb-item-icon_box_2-inner"><a href="https://muffingroup.com/betheme/#testimonials" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-comment-line" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">Testimonials</div></div></div></a></div></div><div class="column mcb-column mcb-item-ixqujq8za one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-ixqujq8za mcb-item-icon_box_2-inner"><a href="https://support.muffingroup.com/documentation/" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-users" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">User's guide</div></div></div></a></div></div><div class="column mcb-column mcb-item-uupj3hhbq one-fourth laptop-one-fourth tablet-one-third mobile-one-second column_icon_box_2" style=""><div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-uupj3hhbq mcb-item-icon_box_2-inner"><a href="https://www.facebook.com/groups/betheme" target="_blank" title=""><div class="mfn-icon-box mfn-icon-box-left mfn-icon-box-center"><div class="icon-wrapper"><i class="icon-facebook" aria-hidden="true"></i></div><div class="desc-wrapper"><div class="desc">Community</div></div></div></a></div></div></div></div><div class="wrap mcb-wrap mcb-wrap-j1o4m3vsdo one tablet-one laptop-one mobile-one clearfix" data-desktop-col="one" data-laptop-col="laptop-one" data-tablet-col="tablet-one" data-mobile-col="mobile-one" style="">
+                <div class="mcb-wrap-inner mcb-wrap-inner-j1o4m3vsdo mfn-module-wrapper mfn-wrapper-for-wraps">
+                    <div class="mcb-wrap-background-overlay"></div><div class="column mcb-column mcb-item-th93pfeh one-second laptop-one-second tablet-one-second mobile-one column_button mfn-item-inline" style="">
+                        <div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-th93pfeh mcb-item-button-inner">
+                            <a class="button  button_left button_size_2" href="https://support.muffingroup.com/documentation/" target="_blank" title=""><span class="button_icon"><i class="icon-layout" aria-hidden="true"></i></span><span class="button_label">View documentation</span></a>
+                        </div>
+                    </div>
+                    <div class="column mcb-column mcb-item-li446957k one-second laptop-one-second tablet-one-second mobile-one column_button mfn-item-inline" style="">
+                        <div class="mcb-column-inner mfn-module-wrapper mcb-column-inner-li446957k mcb-item-button-inner">
+                            <a class="button  button_left button_theme button_size_2" href="https://muffingroup.com/betheme/" target="_blank" title=""><span class="button_icon"><i class="icon-layout" aria-hidden="true"></i></span><span class="button_label">See more about Betheme</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>Your Donation Helps Improve Youth Health</h1>
+            <p>We use pickleball's affordability and simplicity to promote physical activity, benefiting our community's mental and physical health.</p>
+            <a href="#" class="donate-button">Donate</a>
+        </div>
+
+    <!-- What We Do Section -->
+    <div class="section">
+        <h2>What We Do</h2>
+        <div class="what-we-do">
+            <div class="content">
+                <div>
+                    <h3>Youth and Adult Programs</h3>
+                    <p>Offer skill development, recreational play, and competitive leagues for all ages and skill levels.</p>
+                </div>
+                <div>
+                    <h3>Tournaments</h3>
+                    <p>Host regular competitive events for community engagement and skill improvement.</p>
+                </div>
+                <div>
+                    <h3>Workshops and Training</h3>
+                    <p>Provide sessions led by experienced coaches focusing on skill refinement and new techniques.</p>
+                </div>
+            </div>
+            <div class="image">
+                <img src="player-image.jpg" alt="Player Image"> <!-- Image on the right side -->
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>Fundraising Programs</h2>
+        <div class="fundraising-programs">
+            <div class="program">
+                <img src="icon1.png" alt="Program 1"> <!-- Replace with appropriate icons -->
+                <h4>Program 1</h4>
+                <p>Description of Program 1 goes here.</p>
+            </div>
+            <div class="program">
+                <img src="icon2.png" alt="Program 2"> <!-- Replace with appropriate icons -->
+                <h4>Program 2</h4>
+                <p>Description of Program 2 goes here.</p>
+            </div>
+            <div class="program">
+                <img src="icon3.png" alt="Program 3"> <!-- Replace with appropriate icons -->
+                <h4>Program 3</h4>
+                <p>Description of Program 3 goes here.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Commitment Section -->
+    <div class="commitment">
+        <h2>Commitment to our Youths</h2>
+        <ul>
+            <li>Engaging and rewarding community participation through opportunities.</li>
+            <li>Providing resources and support for skill development and personal growth.</li>
+            <li>Building a stronger, healthier community through physical activity.</li>
+        </ul>
+        <img src="community-image.jpg" alt="Community Image"> <!-- Replace with appropriate image -->
+    </div>
+
+    <!-- Join the Community Section -->
+    <div class="join-community">
+        <h2>Join the NEP Community</h2>
+        <input type="email" placeholder="Enter your email">
+        <button>Sign Up</button>
+    </div>
+
+    <!-- Contact Form Section -->
+    <div class="contact-form">
+        <h2>Write a message to us</h2>
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea placeholder="Your Message"></textarea>
+        <button>Submit</button>
+    </div>
+
+</body>
+</html>

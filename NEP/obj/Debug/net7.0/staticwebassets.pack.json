@@ -11189,8 +11189,20 @@
       "PackagePath": "staticwebassets\\img\\RegisterPageImg.png"
     },
     {
+      "Id": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\img\\about-1-ver2.png",
+      "PackagePath": "staticwebassets\\img\\about-1-ver2.png"
+    },
+    {
       "Id": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\img\\about-1.jpg",
       "PackagePath": "staticwebassets\\img\\about-1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\img\\about-2-1-ver2.png",
+      "PackagePath": "staticwebassets\\img\\about-2-1-ver2.png"
+    },
+    {
+      "Id": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\img\\about-2-2-ver2.png",
+      "PackagePath": "staticwebassets\\img\\about-2-2-ver2.png"
     },
     {
       "Id": "C:\\Users\\vishn\\source\\repos\\NeverEnoughPickleball\\NEP\\wwwroot\\img\\about-2.jpg",
