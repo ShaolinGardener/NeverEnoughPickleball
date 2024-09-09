@@ -100,6 +100,11 @@
                             <input asp-for="Email" class="form-control" type="email" placeholder="email">
                             <span asp-validation-for="Email" class="text-danger"></span>
                         </div>
+                        <div class="Rectangle-17">
+                            <label for="ProfilePicture">Upload Profile Picture</label>
+                            <input asp-for="ProfilePicture" type="file" class="form-control" accept="image/*">
+                            <span asp-validation-for="ProfilePicture" class="text-danger"></span>
+                        </div>
                     </div>
                     <div class="mt-2 text-sm text-gray-600">
                         Information above used for contact by Never Enough Pickleball websites and CourtChattr apps, for updates, new features, news only provided to coaches. Name, number, URL, phone made public where opt.

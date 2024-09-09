@@ -35,6 +35,8 @@ namespace NEP.Models
         [EmailAddress]
         public string Email { get; set; }
 
+        public byte[] ProfilePicture { get; set; }
+
         public string PlayType { get; set; }
         public string UnofficialRating { get; set; }
         public string DuprRating { get; set; }

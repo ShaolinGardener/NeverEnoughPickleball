@@ -53,16 +53,28 @@ namespace NEP.Controllers
         public async Task<IActionResult> Create([Bind("Id,FirstName,LastName,ScreenName,CompanyOrOrganization,DateOfBirth,Street,AptSuiteNumber," +
     "City,State,Zip,Phone,Email,PlayType,UnofficialRating,DuprRating,UtprRating,PaddleUsed,PersonalBio,VolunteerInterest," +
     "PlayedState,PlayedCity,PlayedParkFacility,AvailableFacilitiesName,AvailableFacilitiesContactEmail,HowDidYouHearAboutNEP," +
-            "SuggestionsForNEP")] Member member)
+    "SuggestionsForNEP")] Member member, IFormFile profilePicture)
         {
             if (ModelState.IsValid)
             {
+                if (profilePicture != null && profilePicture.Length > 0)
+                {
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await profilePicture.CopyToAsync(memoryStream);
+                        member.ProfilePicture = memoryStream.ToArray(); // Convert the uploaded file to byte array
+                    }
+                }
+
                 _context.Add(member);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index)); // Redirect to the list of members after successful creation
             }
+
+            // Re-populate the view with the member data in case of validation failure
             return View(member);
         }
+
 
 
 
